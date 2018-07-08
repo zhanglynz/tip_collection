@@ -1,0 +1,190 @@
+--- 
+title: "Useful Tips"
+author: "Lingyun Zhang"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+links-as-notes: true
+colorlinks: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preface {-}
+
+This book contains useful Tex, R and Python tips.
+
+# Tex tips {-}
+
+## Commenting in WinEdt
+
+In Winedt use `Ctrl+Shift+Alt+→` to comment a line and to uncomment a line use `Ctrl+Shift+Alt+←`.
+
+**Source**: https://tex.stackexchange.com/questions/230997/which-windows-editors-have-comment-uncomment-keyboard-shortcuts
+
+
+## Rotate a table
+
+**Q**: How to rotate a table in latex?
+
+**A**:
+````
+\usepackage{rotating}
+\begin{sidewaystable}[h]
+\centering
+\caption{Mean, Median and Standard Deviation at AU level from Simulations, where
+                  tolerance limit set at MB level and $p=0.04$}
+\label{table04}
+\scalebox{1}{
+\begin{tabular}{ccccccccc}
+  \hline
+Simu. & Nat. REPNS Rate & New Nat. REPNS Rate & Mean & New Mean & Median & New Median & SD & New SD \\
+  \hline
+  1 & 0.9533 & 0.9467 & 0.9519 & 0.9469 & 0.9604 & 0.9545 & 0.0427 & 0.0291 \\
+  2 & 0.9533 & 0.9467 & 0.9519 & 0.9466 & 0.9604 & 0.9545 & 0.0427 & 0.0344 \\
+  3 & 0.9533 & 0.9467 & 0.9519 & 0.9467 & 0.9604 & 0.9544 & 0.0427 & 0.0301 \\
+  4 & 0.9533 & 0.9467 & 0.9519 & 0.9466 & 0.9604 & 0.9545 & 0.0427 & 0.0302 \\
+  5 & 0.9533 & 0.9467 & 0.9519 & 0.9468 & 0.9604 & 0.9545 & 0.0427 & 0.0291 \\
+  6 & 0.9533 & 0.9467 & 0.9519 & 0.9466 & 0.9604 & 0.9543 & 0.0427 & 0.0304 \\
+  7 & 0.9533 & 0.9467 & 0.9519 & 0.9467 & 0.9604 & 0.9544 & 0.0427 & 0.0298 \\
+  8 & 0.9533 & 0.9466 & 0.9519 & 0.9467 & 0.9604 & 0.9545 & 0.0427 & 0.0342 \\
+  9 & 0.9533 & 0.9467 & 0.9519 & 0.9467 & 0.9604 & 0.9546 & 0.0427 & 0.0296 \\
+ 10 & 0.9533 & 0.9466 & 0.9519 & 0.9468 & 0.9604 & 0.9546 & 0.0427 & 0.0292 \\
+   \hline
+\end{tabular}
+}
+\end{sidewaystable}
+````
+
+# R tips {-}
+
+## Programming with dplyr
+```{r, eval=FALSE}
+library(dplyr)
+
+cols <- c("am","gear")
+grouping_vars <- rlang::syms(cols)
+
+my_df <- 
+  mtcars %>%
+  group_by(!!!grouping_vars) %>%
+  summarise(mean_cyl=mean(cyl))
+```
+
+## Add an extra column 
+**Q**: How to add a column to a dataframe?
+
+**A**:
+```{r, eval=FALSE}
+library(tibble) # for add_column
+library(dplyr)
+
+df <-
+  data.frame(a = 1:5, b = 2:6, c = 3:7) %>%
+  add_column(d = 4:8, .after = 2)
+```
+
+## Find number of NA's 
+**Q**: How to check NA's in a dataframe?
+
+**A**: `colSums(is.na(df))`
+
+## Subset a dataframe by NA
+**Q**: How to get the rows which have NA's in a dataframe?
+
+**A**: `new_DF <- DF[rowSums(is.na(DF)) > 0, ]`
+
+## Covert NA to 0
+**Q**: How to convert NA to 0 in a dataframe?
+
+**A**: `df[is.na(df)] <- 0`
+
+## Label y axis in ggplot2
+**Q**: How to label y axis with percent/dollar/comma sign?
+
+**A**: 
+```{r, eval=FALSE}
+p <- ggplot(df, aes(x, y)) + geom_point()
+p + scale_y_continuous(labels = scales::percent)
+p + scale_y_continuous(labels = scales::dollar)
+p + scale_y_continuous(labels = scales::comma)
+```
+
+## Set plot margins in ggplot2
+```{r, eval=FALSE}
+library(ggplot2)
+
+my_df <- data.frame(x = 1:10, y = 1:10)
+
+ggplot(my_df, aes(x, y)) +
+  geom_point() +
+  theme(plot.margin = unit(c(1, 2, 4, 6), "cm")) # top, right, bottom and left
+```
+
+## Set plot margins in base R
+```{r, eval=FALSE}
+# sets the bottom, left, top and right margins respectively of 
+# the plot region in number of lines of text
+par(mar = c(10, 8, 4, 2))
+plot(1:10, 1:10, xlab = "x", ylab = "y")
+```
+
+## Deal with long labels in ggplot2
+
+**Source**: https://stackoverflow.com/questions/41568411/how-to-maintain-size-of-ggplot-with-long-labels
+
+## Edit plotly object
+```{r, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(plotly)
+
+df <- data.frame(x = c(1, 2, 3, 4), 
+                 y = c(1, 5, 3, 5), 
+                 group = c('A', 'A', 'B', 'B'))
+g <- 
+  ggplot(data=df, aes(x = x, y = y, colour = group)) + 
+  geom_point(size = 4) +
+  geom_hline(yintercept = 2) +
+  scale_color_manual(values=c("red", "blue")) +
+  theme(plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"))
+
+p <- plotly_build(g) %>% config(displayModeBar = FALSE)
+
+# to have a look at object p
+# str(p)
+
+# modify the text from "~yintercept: 2" to "y-intercept = 2"
+p$x$data[[3]]$text <- "y-intercept = 2"
+
+p
+```
+
+
+## List loaded packages
+**Q**: How to list the packages currently loaded into R's work space? 
+
+**A**:  `(.packages())`
+
+**Source**: http://theobligatescientist.blogspot.com/2010/09/r-tip-listing-loaded-packages.html
+
+
+## Vectorize a matrix
+
+```{r, eval=FALSE}
+x <- matrix(1:10, 2, 5)
+# vectorize it by columns
+c(x) 
+# or
+as.vector(x)
+# vectorize it by rows 
+c(t(x))
+```
+
+**Source**: https://stackoverflow.com/questions/4570537/vectorizing-a-matrix
+
+
+# Python tips {-}
