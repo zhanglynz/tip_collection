@@ -188,3 +188,12 @@ c(t(x))
 
 
 # Python tips {-}
+
+## Viewing all defined variables
+```{r, eval=FALSE}
+dir() # gives the list of in scope variables:
+globals() # gives a dictionary of global variables
+locals() # gives a dictionary of local variables
+```
+
+**Source**: https://stackoverflow.com/questions/633127/viewing-all-defined-variables
