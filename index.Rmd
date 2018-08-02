@@ -88,6 +88,21 @@ df <-
   add_column(d = 4:8, .after = 2)
 ```
 
+## Simple recoding
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+
+x <- letters[1:5]
+y <- recode(x, a = "apple")
+z <- recode(x, b = "banana")
+
+c(y, z)
+
+```
+
+**Source**: https://dplyr.tidyverse.org/reference/recode.html
+
 ## Find number of NA's 
 **Q**: How to check NA's in a dataframe?
 
