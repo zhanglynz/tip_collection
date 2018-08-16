@@ -240,3 +240,22 @@ locals() # gives a dictionary of local variables
 ```
 
 **Source**: https://stackoverflow.com/questions/633127/viewing-all-defined-variables
+
+## `type()`, `dir()`, and `help()`
+
+The `type` function shows the type of an object; the `dir` function lists all the methods available for an object; `help` function gives explanation about a method.
+
+**Example**:
+```{r, eval=FALSE}
+stuff = "Hello world"
+
+type(stuff)
+<class 'str'>
+
+dir(stuff)
+
+
+help(str.capitalize)
+
+```
+
