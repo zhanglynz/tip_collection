@@ -207,6 +207,37 @@ p
 ```
 
 
+## Zoom in on a barchart
+
+```{r, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(gridExtra)
+
+the_data <- data.frame(x = LETTERS[1:3], y = c(200, 300, 150))
+
+# original
+p1 <-
+  ggplot(the_data, aes(x = x, weight = y)) +
+  geom_bar(width = 0.5, fill = "blue") +
+  labs(x = "")
+
+# zoomed 
+p2 <- 
+  p1 + coord_cartesian(ylim = c(100, 300))
+
+# horizontal bars; zoomed
+p3 <-
+  p1 + coord_flip(ylim = c(100, 300))
+
+p4 <- ggplot()
+
+# put tem together
+grid.arrange(p1, p2, p3, p4, newpage = TRUE, 
+             layout_matrix = matrix(1:4, byrow = TRUE, 2, 2))
+```
+
+
+
 ## List loaded packages
 **Q**: How to list the packages currently loaded into R's work space? 
 
