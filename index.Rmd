@@ -60,6 +60,25 @@ Simu. & Nat. REPNS Rate & New Nat. REPNS Rate & Mean & New Mean & Median & New M
 \end{sidewaystable}
 ````
 
+## Multiple rows in a table
+````
+\usepackage{multirow}
+
+\begin{table}[htbp]
+\label{no-lk-errors}
+\begin{center}
+\begin{tabular}{cc|cc}
+& & \multicolumn{2}{c}{$S_2$}\\
+& & present & absent\\
+\hline
+\multirow{2}{*}{$S_1$} & present & $x_{11}$ & $x_{12}$\\
+& absent & $x_{21}$ & $-$
+\end{tabular}
+\end{center}
+\end{table}
+````
+
+
 # R tips {-}
 
 ## Programming with dplyr
