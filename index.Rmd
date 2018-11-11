@@ -309,3 +309,10 @@ help(str.capitalize)
 
 ```
 
+## Commenting out
+
+* Single line comment: Ctrl + 1
+* Multi-line comment: select the lines to be commented Ctrl + 4
+* Unblock Multi-line comment: Ctrl + 5
+
+Resource: https://stackoverflow.com/questions/36644144/shortcut-key-for-commenting-out-lines-of-python-code-in-spyder
