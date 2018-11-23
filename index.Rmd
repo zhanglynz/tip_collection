@@ -81,6 +81,17 @@ Simu. & Nat. REPNS Rate & New Nat. REPNS Rate & Mean & New Mean & Median & New M
 
 # R tips {-}
 
+## Removing/keeping objects
+
+
+**Q**: How to remove all objects but some from the workspace in R?
+
+**A**:
+```{r, eval=FALSE}
+rm(list=ls()[! ls() %in% c("a","b")])
+```
+
+
 ## Programming with dplyr
 ```{r, eval=FALSE}
 library(dplyr)
