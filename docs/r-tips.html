@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Useful Tips</title>
+  <meta name="description" content="Useful Tips">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Useful Tips" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Useful Tips" />
+  
+  
+  
+
+<meta name="author" content="Lingyun Zhang">
+
+
+<meta name="date" content="2018-11-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="tex-tips.html">
+<link rel="next" href="python-tips.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.7.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotlyjs-1.29.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotlyjs-1.29.2/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="tex-tips.html"><a href="tex-tips.html"><i class="fa fa-check"></i>Tex tips</a><ul>
+<li class="chapter" data-level="0.1" data-path="tex-tips.html"><a href="tex-tips.html#commenting-in-winedt"><i class="fa fa-check"></i><b>0.1</b> Commenting in WinEdt</a></li>
+<li class="chapter" data-level="0.2" data-path="tex-tips.html"><a href="tex-tips.html#rotate-a-table"><i class="fa fa-check"></i><b>0.2</b> Rotate a table</a></li>
+<li class="chapter" data-level="0.3" data-path="tex-tips.html"><a href="tex-tips.html#multiple-rows-in-a-table"><i class="fa fa-check"></i><b>0.3</b> Multiple rows in a table</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="r-tips.html"><a href="r-tips.html"><i class="fa fa-check"></i>R tips</a><ul>
+<li class="chapter" data-level="0.4" data-path="r-tips.html"><a href="r-tips.html#removingkeeping-objects"><i class="fa fa-check"></i><b>0.4</b> Removing/keeping objects</a></li>
+<li class="chapter" data-level="0.5" data-path="r-tips.html"><a href="r-tips.html#programming-with-dplyr"><i class="fa fa-check"></i><b>0.5</b> Programming with dplyr</a></li>
+<li class="chapter" data-level="0.6" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-column"><i class="fa fa-check"></i><b>0.6</b> Add an extra column</a></li>
+<li class="chapter" data-level="0.7" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-row"><i class="fa fa-check"></i><b>0.7</b> Add an extra row</a></li>
+<li class="chapter" data-level="0.8" data-path="r-tips.html"><a href="r-tips.html#simple-recoding"><i class="fa fa-check"></i><b>0.8</b> Simple recoding</a></li>
+<li class="chapter" data-level="0.9" data-path="r-tips.html"><a href="r-tips.html#use-grepl-to-filter"><i class="fa fa-check"></i><b>0.9</b> Use <code>grepl()</code> to filter</a></li>
+<li class="chapter" data-level="0.10" data-path="r-tips.html"><a href="r-tips.html#find-number-of-nas"><i class="fa fa-check"></i><b>0.10</b> Find number of NA’s</a></li>
+<li class="chapter" data-level="0.11" data-path="r-tips.html"><a href="r-tips.html#subset-a-dataframe-by-na"><i class="fa fa-check"></i><b>0.11</b> Subset a dataframe by NA</a></li>
+<li class="chapter" data-level="0.12" data-path="r-tips.html"><a href="r-tips.html#covert-na-to-0"><i class="fa fa-check"></i><b>0.12</b> Covert NA to 0</a></li>
+<li class="chapter" data-level="0.13" data-path="r-tips.html"><a href="r-tips.html#label-y-axis-in-ggplot2"><i class="fa fa-check"></i><b>0.13</b> Label y axis in ggplot2</a></li>
+<li class="chapter" data-level="0.14" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-ggplot2"><i class="fa fa-check"></i><b>0.14</b> Set plot margins in ggplot2</a></li>
+<li class="chapter" data-level="0.15" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-base-r"><i class="fa fa-check"></i><b>0.15</b> Set plot margins in base R</a></li>
+<li class="chapter" data-level="0.16" data-path="r-tips.html"><a href="r-tips.html#deal-with-long-labels-in-ggplot2"><i class="fa fa-check"></i><b>0.16</b> Deal with long labels in ggplot2</a></li>
+<li class="chapter" data-level="0.17" data-path="r-tips.html"><a href="r-tips.html#edit-plotly-object"><i class="fa fa-check"></i><b>0.17</b> Edit plotly object</a></li>
+<li class="chapter" data-level="0.18" data-path="r-tips.html"><a href="r-tips.html#zoom-in-on-a-barchart"><i class="fa fa-check"></i><b>0.18</b> Zoom in on a barchart</a></li>
+<li class="chapter" data-level="0.19" data-path="r-tips.html"><a href="r-tips.html#list-loaded-packages"><i class="fa fa-check"></i><b>0.19</b> List loaded packages</a></li>
+<li class="chapter" data-level="0.20" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.20</b> Vectorize a matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a><ul>
+<li class="chapter" data-level="0.21" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.21</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.22" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.22</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.23" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.23</b> Commenting out</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Useful Tips</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-tips" class="section level1 unnumbered">
+<h1>R tips</h1>
+<div id="removingkeeping-objects" class="section level2">
+<h2><span class="header-section-number">0.4</span> Removing/keeping objects</h2>
+<p><strong>Q</strong>: How to remove all objects but some from the workspace in R?</p>
+<p><strong>A</strong>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list=</span><span class="kw">ls</span>()[<span class="op">!</span><span class="st"> </span><span class="kw">ls</span>() <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>)])</code></pre></div>
+</div>
+<div id="programming-with-dplyr" class="section level2">
+<h2><span class="header-section-number">0.5</span> Programming with dplyr</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
+
+cols &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;am&quot;</span>,<span class="st">&quot;gear&quot;</span>)
+grouping_vars &lt;-<span class="st"> </span>rlang<span class="op">::</span><span class="kw">syms</span>(cols)
+
+my_df &lt;-<span class="st"> </span>
+<span class="st">  </span>mtcars <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(<span class="op">!!!</span>grouping_vars) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_cyl=</span><span class="kw">mean</span>(cyl))</code></pre></div>
+</div>
+<div id="add-an-extra-column" class="section level2">
+<h2><span class="header-section-number">0.6</span> Add an extra column</h2>
+<p><strong>Q</strong>: How to add a column to a dataframe?</p>
+<p><strong>A</strong>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tibble) <span class="co"># for add_column</span>
+<span class="kw">library</span>(dplyr)
+
+df &lt;-
+<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b =</span> <span class="dv">2</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">c =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">add_column</span>(<span class="dt">d =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">.after =</span> <span class="dv">2</span>)</code></pre></div>
+</div>
+<div id="add-an-extra-row" class="section level2">
+<h2><span class="header-section-number">0.7</span> Add an extra row</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tibble) <span class="co"># for add_row</span>
+
+df_a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> letters[<span class="dv">8</span><span class="op">:</span><span class="dv">10</span>], <span class="dt">y =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)
+
+(df_b &lt;-<span class="st"> </span><span class="kw">add_row</span>(df_a, <span class="dt">x =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">y =</span> <span class="dv">10</span>, <span class="dt">.before =</span> <span class="dv">1</span>))</code></pre></div>
+<pre><code>##   x  y
+## 1 x 10
+## 2 h  1
+## 3 i  2
+## 4 j  3</code></pre>
+</div>
+<div id="simple-recoding" class="section level2">
+<h2><span class="header-section-number">0.8</span> Simple recoding</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
+
+x &lt;-<span class="st"> </span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]
+y &lt;-<span class="st"> </span><span class="kw">recode</span>(x, <span class="dt">a =</span> <span class="st">&quot;apple&quot;</span>)
+z &lt;-<span class="st"> </span><span class="kw">recode</span>(x, <span class="dt">b =</span> <span class="st">&quot;banana&quot;</span>)
+
+<span class="kw">c</span>(y, z)</code></pre></div>
+<pre><code>##  [1] &quot;apple&quot;  &quot;b&quot;      &quot;c&quot;      &quot;d&quot;      &quot;e&quot;      &quot;a&quot;      &quot;banana&quot;
+##  [8] &quot;c&quot;      &quot;d&quot;      &quot;e&quot;</code></pre>
+<p><strong>Source</strong>: <a href="https://dplyr.tidyverse.org/reference/recode.html" class="uri">https://dplyr.tidyverse.org/reference/recode.html</a></p>
+</div>
+<div id="use-grepl-to-filter" class="section level2">
+<h2><span class="header-section-number">0.9</span> Use <code>grepl()</code> to filter</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
+
+df_<span class="dv">1</span> &lt;-<span class="st"> </span>
+<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;x-18&quot;</span>, <span class="kw">sample</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dv">3</span>), <span class="st">&quot;a-18&quot;</span>, <span class="st">&quot;b-18&quot;</span>), <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">6</span>))
+
+<span class="co"># get the rows where x contains &#39;-&#39;</span>
+(df_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">filter</span>(df_<span class="dv">1</span>, <span class="kw">grepl</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">-&quot;</span>, x)))</code></pre></div>
+<pre><code>##      x          y
+## 1 x-18 -0.2370614
+## 2 a-18 -0.9255346
+## 3 b-18  0.2382497</code></pre>
+</div>
+<div id="find-number-of-nas" class="section level2">
+<h2><span class="header-section-number">0.10</span> Find number of NA’s</h2>
+<p><strong>Q</strong>: How to check NA’s in a dataframe?</p>
+<p><strong>A</strong>: <code>colSums(is.na(df))</code></p>
+</div>
+<div id="subset-a-dataframe-by-na" class="section level2">
+<h2><span class="header-section-number">0.11</span> Subset a dataframe by NA</h2>
+<p><strong>Q</strong>: How to get the rows which have NA’s in a dataframe?</p>
+<p><strong>A</strong>: <code>new_DF &lt;- DF[rowSums(is.na(DF)) &gt; 0, ]</code></p>
+</div>
+<div id="covert-na-to-0" class="section level2">
+<h2><span class="header-section-number">0.12</span> Covert NA to 0</h2>
+<p><strong>Q</strong>: How to convert NA to 0 in a dataframe?</p>
+<p><strong>A</strong>: <code>df[is.na(df)] &lt;- 0</code></p>
+</div>
+<div id="label-y-axis-in-ggplot2" class="section level2">
+<h2><span class="header-section-number">0.13</span> Label y axis in ggplot2</h2>
+<p><strong>Q</strong>: How to label y axis with percent/dollar/comma sign?</p>
+<p><strong>A</strong>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x, y)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()
+p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>percent)
+p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar)
+p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>comma)</code></pre></div>
+</div>
+<div id="set-plot-margins-in-ggplot2" class="section level2">
+<h2><span class="header-section-number">0.14</span> Set plot margins in ggplot2</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+my_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">y =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)
+
+<span class="kw">ggplot</span>(my_df, <span class="kw">aes</span>(x, y)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.margin =</span> <span class="kw">unit</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="st">&quot;cm&quot;</span>)) <span class="co"># top, right, bottom and left</span></code></pre></div>
+</div>
+<div id="set-plot-margins-in-base-r" class="section level2">
+<h2><span class="header-section-number">0.15</span> Set plot margins in base R</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># sets the bottom, left, top and right margins respectively of </span>
+<span class="co"># the plot region in number of lines of text</span>
+<span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">2</span>))
+<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">xlab =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;y&quot;</span>)</code></pre></div>
+</div>
+<div id="deal-with-long-labels-in-ggplot2" class="section level2">
+<h2><span class="header-section-number">0.16</span> Deal with long labels in ggplot2</h2>
+<p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/41568411/how-to-maintain-size-of-ggplot-with-long-labels" class="uri">https://stackoverflow.com/questions/41568411/how-to-maintain-size-of-ggplot-with-long-labels</a></p>
+</div>
+<div id="edit-plotly-object" class="section level2">
+<h2><span class="header-section-number">0.17</span> Edit plotly object</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(plotly)
+
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), 
+                 <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>), 
+                 <span class="dt">group =</span> <span class="kw">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;B&#39;</span>))
+g &lt;-<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">colour =</span> group)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="dv">2</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.margin =</span> <span class="kw">unit</span>(<span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="st">&quot;cm&quot;</span>))
+
+p &lt;-<span class="st"> </span><span class="kw">plotly_build</span>(g) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">config</span>(<span class="dt">displayModeBar =</span> <span class="ot">FALSE</span>)
+
+<span class="co"># to have a look at object p</span>
+<span class="co"># str(p)</span>
+
+<span class="co"># modify the text from &quot;~yintercept: 2&quot; to &quot;y-intercept = 2&quot;</span>
+p<span class="op">$</span>x<span class="op">$</span>data[[<span class="dv">3</span>]]<span class="op">$</span>text &lt;-<span class="st"> &quot;y-intercept = 2&quot;</span>
+
+p</code></pre></div>
+<div id="13f420965c78" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="13f420965c78">{"x":{"data":[{"x":[1,2],"y":[1,5],"text":["~x: 1<br />~y: 1<br />~group: A","~x: 2<br />~y: 5<br />~group: A"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","name":"A","legendgroup":"A","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,4],"y":[3,5],"text":["~x: 3<br />~y: 3<br />~group: B","~x: 4<br />~y: 5<br />~group: B"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,255,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,255,1)"}},"hoveron":"points","name":"B","legendgroup":"B","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.85,4.15],"y":[2,2],"text":"y-intercept = 2","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":34.8976377952756,"r":18.8976377952756,"b":48.851975694819,"l":43.0072268363715},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[0.85,4.15],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"x","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[0.8,5.2],"tickmode":"array","ticktext":["1","2","3","4","5"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["1","2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":"y","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.913385826771654},"annotations":[{"text":"group","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false,"displayModeBar":false},"source":"A","attrs":{"13f44248e3c":{"x":{},"y":{},"colour":{},"type":"scatter"},"13f42dd9712c":{"yintercept":{}}},"cur_data":"13f44248e3c","visdat":{"13f44248e3c":["function (y) ","x"],"13f42dd9712c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null},{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script>
+</div>
+<div id="zoom-in-on-a-barchart" class="section level2">
+<h2><span class="header-section-number">0.18</span> Zoom in on a barchart</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(gridExtra)
+
+the_data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">150</span>))
+
+<span class="co"># original</span>
+p1 &lt;-
+<span class="st">  </span><span class="kw">ggplot</span>(the_data, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">weight =</span> y)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>)
+
+<span class="co"># zoomed </span>
+p2 &lt;-<span class="st"> </span>
+<span class="st">  </span>p1 <span class="op">+</span><span class="st"> </span><span class="kw">coord_cartesian</span>(<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">100</span>, <span class="dv">300</span>))
+
+<span class="co"># horizontal bars; zoomed</span>
+p3 &lt;-
+<span class="st">  </span>p1 <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>(<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">100</span>, <span class="dv">300</span>))
+
+p4 &lt;-<span class="st"> </span><span class="kw">ggplot</span>()
+
+<span class="co"># put tem together</span>
+<span class="kw">grid.arrange</span>(p1, p2, p3, p4, <span class="dt">newpage =</span> <span class="ot">TRUE</span>, 
+             <span class="dt">layout_matrix =</span> <span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dv">2</span>, <span class="dv">2</span>))</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="list-loaded-packages" class="section level2">
+<h2><span class="header-section-number">0.19</span> List loaded packages</h2>
+<p><strong>Q</strong>: How to list the packages currently loaded into R’s work space?</p>
+<p><strong>A</strong>: <code>(.packages())</code></p>
+<p><strong>Source</strong>: <a href="http://theobligatescientist.blogspot.com/2010/09/r-tip-listing-loaded-packages.html" class="uri">http://theobligatescientist.blogspot.com/2010/09/r-tip-listing-loaded-packages.html</a></p>
+</div>
+<div id="vectorize-a-matrix" class="section level2">
+<h2><span class="header-section-number">0.20</span> Vectorize a matrix</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">5</span>)
+<span class="co"># vectorize it by columns</span>
+<span class="kw">c</span>(x) 
+<span class="co"># or</span>
+<span class="kw">as.vector</span>(x)
+<span class="co"># vectorize it by rows </span>
+<span class="kw">c</span>(<span class="kw">t</span>(x))</code></pre></div>
+<p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/4570537/vectorizing-a-matrix" class="uri">https://stackoverflow.com/questions/4570537/vectorizing-a-matrix</a></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tex-tips.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-tips.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

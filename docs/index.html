@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Useful Tips</title>
+  <meta name="description" content="Useful Tips">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Useful Tips" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Useful Tips" />
+  
+  
+  
+
+<meta name="author" content="Lingyun Zhang">
+
+
+<meta name="date" content="2018-11-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="tex-tips.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.7.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotlyjs-1.29.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotlyjs-1.29.2/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="tex-tips.html"><a href="tex-tips.html"><i class="fa fa-check"></i>Tex tips</a><ul>
+<li class="chapter" data-level="0.1" data-path="tex-tips.html"><a href="tex-tips.html#commenting-in-winedt"><i class="fa fa-check"></i><b>0.1</b> Commenting in WinEdt</a></li>
+<li class="chapter" data-level="0.2" data-path="tex-tips.html"><a href="tex-tips.html#rotate-a-table"><i class="fa fa-check"></i><b>0.2</b> Rotate a table</a></li>
+<li class="chapter" data-level="0.3" data-path="tex-tips.html"><a href="tex-tips.html#multiple-rows-in-a-table"><i class="fa fa-check"></i><b>0.3</b> Multiple rows in a table</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="r-tips.html"><a href="r-tips.html"><i class="fa fa-check"></i>R tips</a><ul>
+<li class="chapter" data-level="0.4" data-path="r-tips.html"><a href="r-tips.html#removingkeeping-objects"><i class="fa fa-check"></i><b>0.4</b> Removing/keeping objects</a></li>
+<li class="chapter" data-level="0.5" data-path="r-tips.html"><a href="r-tips.html#programming-with-dplyr"><i class="fa fa-check"></i><b>0.5</b> Programming with dplyr</a></li>
+<li class="chapter" data-level="0.6" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-column"><i class="fa fa-check"></i><b>0.6</b> Add an extra column</a></li>
+<li class="chapter" data-level="0.7" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-row"><i class="fa fa-check"></i><b>0.7</b> Add an extra row</a></li>
+<li class="chapter" data-level="0.8" data-path="r-tips.html"><a href="r-tips.html#simple-recoding"><i class="fa fa-check"></i><b>0.8</b> Simple recoding</a></li>
+<li class="chapter" data-level="0.9" data-path="r-tips.html"><a href="r-tips.html#use-grepl-to-filter"><i class="fa fa-check"></i><b>0.9</b> Use <code>grepl()</code> to filter</a></li>
+<li class="chapter" data-level="0.10" data-path="r-tips.html"><a href="r-tips.html#find-number-of-nas"><i class="fa fa-check"></i><b>0.10</b> Find number of NA’s</a></li>
+<li class="chapter" data-level="0.11" data-path="r-tips.html"><a href="r-tips.html#subset-a-dataframe-by-na"><i class="fa fa-check"></i><b>0.11</b> Subset a dataframe by NA</a></li>
+<li class="chapter" data-level="0.12" data-path="r-tips.html"><a href="r-tips.html#covert-na-to-0"><i class="fa fa-check"></i><b>0.12</b> Covert NA to 0</a></li>
+<li class="chapter" data-level="0.13" data-path="r-tips.html"><a href="r-tips.html#label-y-axis-in-ggplot2"><i class="fa fa-check"></i><b>0.13</b> Label y axis in ggplot2</a></li>
+<li class="chapter" data-level="0.14" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-ggplot2"><i class="fa fa-check"></i><b>0.14</b> Set plot margins in ggplot2</a></li>
+<li class="chapter" data-level="0.15" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-base-r"><i class="fa fa-check"></i><b>0.15</b> Set plot margins in base R</a></li>
+<li class="chapter" data-level="0.16" data-path="r-tips.html"><a href="r-tips.html#deal-with-long-labels-in-ggplot2"><i class="fa fa-check"></i><b>0.16</b> Deal with long labels in ggplot2</a></li>
+<li class="chapter" data-level="0.17" data-path="r-tips.html"><a href="r-tips.html#edit-plotly-object"><i class="fa fa-check"></i><b>0.17</b> Edit plotly object</a></li>
+<li class="chapter" data-level="0.18" data-path="r-tips.html"><a href="r-tips.html#zoom-in-on-a-barchart"><i class="fa fa-check"></i><b>0.18</b> Zoom in on a barchart</a></li>
+<li class="chapter" data-level="0.19" data-path="r-tips.html"><a href="r-tips.html#list-loaded-packages"><i class="fa fa-check"></i><b>0.19</b> List loaded packages</a></li>
+<li class="chapter" data-level="0.20" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.20</b> Vectorize a matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a><ul>
+<li class="chapter" data-level="0.21" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.21</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.22" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.22</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.23" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.23</b> Commenting out</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Useful Tips</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Useful Tips</h1>
+<h4 class="author"><em>Lingyun Zhang</em></h4>
+<h4 class="date"><em>2018-11-24</em></h4>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p>This book contains useful Tex, R and Python tips.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="tex-tips.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
