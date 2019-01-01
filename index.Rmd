@@ -79,6 +79,13 @@ Simu. & Nat. REPNS Rate & New Nat. REPNS Rate & Mean & New Mean & Median & New M
 ````
 
 
+## Calligraphy fonts
+````
+$\mathcal{N}_0$
+````
+
+**Source:** https://tex.stackexchange.com/questions/84041/why-does-calm-n-give-m
+
 # R tips {-}
 
 ## Removing/keeping objects
