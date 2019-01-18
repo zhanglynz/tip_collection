@@ -88,6 +88,18 @@ $\mathcal{N}_0$
 
 # R tips {-}
 
+## Testing `character(0)` in `if` statement
+
+```{r, eval=FALSE}
+v <- character(0)
+identical(v, character(0))  # returns TRUE
+
+identical(v, "")           # returns FALSE
+identical(v, numeric(0))   # returns also FALSE
+```
+
+**Source:** https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement
+
 ## Removing/keeping objects
 
 
