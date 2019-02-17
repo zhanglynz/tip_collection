@@ -86,6 +86,14 @@ $\mathcal{N}_0$
 
 **Source:** https://tex.stackexchange.com/questions/84041/why-does-calm-n-give-m
 
+## Type degree
+````
+$360^{\circ}$
+````
+
+**Source:** http://web.ift.uib.no/HP/LaTeX_degree.html
+
+
 # R tips {-}
 
 ## Testing `character(0)` in `if` statement
