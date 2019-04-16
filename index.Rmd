@@ -180,7 +180,7 @@ df_1 <-
   data.frame(x = c("x-18", sample(letters[1:3], 3), "a-18", "b-18"), y = rnorm(6))
 
 # get the rows where x contains '-'
-(df_2 <- filter(df_1, grepl("\\-", x)))
+(df_2 <- filter(df_1, grepl("-", x)))
 
 ```
 
