@@ -156,6 +156,29 @@ df_a <- data.frame(x = letters[8:10], y = 1:3)
 ```
 
 
+## De-duplicate a dataframe
+```{r, message=FALSE, warning=FALSE}
+library(dplyr)
+
+a_df <- 
+  data.frame(x = rep(letters[1:3], each = 2),
+             y = rep(letters[2:4], each = 2),
+             z = rep(1:2, each = 3))
+(a_df)
+
+b_df <- 
+  a_df %>% 
+  distinct()
+
+(b_df)
+
+c_df <- 
+  a_df %>% 
+  distinct(x, y, .keep_all = TRUE)
+
+(c_df)
+```
+
 
 ## Simple recoding
 
