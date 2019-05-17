@@ -349,6 +349,21 @@ grid.arrange(p1, p2, p3, p4, newpage = TRUE,
 **Source**: http://theobligatescientist.blogspot.com/2010/09/r-tip-listing-loaded-packages.html
 
 
+## Function names in a loaded package
+**Q**: How to find function names in a loaded package?
+
+**A**: Firstly load the package using `library()`, and then use `lsf.str(package:package_name)`. For example
+
+```{r, eval=FALSE}
+library(tidyr)
+lsf.str("package:tidyr")
+```
+
+**Source**: https://stackoverflow.com/questions/30392542/is-there-a-command-in-r-to-view-all-the-functions-present-in-a-package
+
+ 
+
+
 ## Vectorize a matrix
 
 ```{r, eval=FALSE}

@@ -25,7 +25,7 @@
 <meta name="author" content="Lingyun Zhang">
 
 
-<meta name="date" content="2019-04-25">
+<meta name="date" content="2019-05-17">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -134,12 +134,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.22" data-path="r-tips.html"><a href="r-tips.html#edit-plotly-object"><i class="fa fa-check"></i><b>0.22</b> Edit plotly object</a></li>
 <li class="chapter" data-level="0.23" data-path="r-tips.html"><a href="r-tips.html#zoom-in-on-a-barchart"><i class="fa fa-check"></i><b>0.23</b> Zoom in on a barchart</a></li>
 <li class="chapter" data-level="0.24" data-path="r-tips.html"><a href="r-tips.html#list-loaded-packages"><i class="fa fa-check"></i><b>0.24</b> List loaded packages</a></li>
-<li class="chapter" data-level="0.25" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.25</b> Vectorize a matrix</a></li>
+<li class="chapter" data-level="0.25" data-path="r-tips.html"><a href="r-tips.html#function-names-in-a-loaded-package"><i class="fa fa-check"></i><b>0.25</b> Function names in a loaded package</a></li>
+<li class="chapter" data-level="0.26" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.26</b> Vectorize a matrix</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a><ul>
-<li class="chapter" data-level="0.26" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.26</b> Viewing all defined variables</a></li>
-<li class="chapter" data-level="0.27" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.27</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
-<li class="chapter" data-level="0.28" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.28</b> Commenting out</a></li>
+<li class="chapter" data-level="0.27" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.27</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.28" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.28</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.29" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.29</b> Commenting out</a></li>
 </ul></li>
 </ul>
 
@@ -161,14 +162,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="python-tips" class="section level1 unnumbered">
 <h1>Python tips</h1>
 <div id="viewing-all-defined-variables" class="section level2">
-<h2><span class="header-section-number">0.26</span> Viewing all defined variables</h2>
+<h2><span class="header-section-number">0.27</span> Viewing all defined variables</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir</span>() <span class="co"># gives the list of in scope variables:</span>
 <span class="kw">globals</span>() <span class="co"># gives a dictionary of global variables</span>
 <span class="kw">locals</span>() <span class="co"># gives a dictionary of local variables</span></code></pre></div>
 <p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/633127/viewing-all-defined-variables" class="uri">https://stackoverflow.com/questions/633127/viewing-all-defined-variables</a></p>
 </div>
 <div id="type-dir-and-help" class="section level2">
-<h2><span class="header-section-number">0.27</span> <code>type()</code>, <code>dir()</code>, and <code>help()</code></h2>
+<h2><span class="header-section-number">0.28</span> <code>type()</code>, <code>dir()</code>, and <code>help()</code></h2>
 <p>The <code>type</code> function shows the type of an object; the <code>dir</code> function lists all the methods available for an object; <code>help</code> function gives explanation about a method.</p>
 <p><strong>Example</strong>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stuff =<span class="st"> &quot;Hello world&quot;</span>
@@ -182,7 +183,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">help</span>(str.capitalize)</code></pre></div>
 </div>
 <div id="commenting-out" class="section level2">
-<h2><span class="header-section-number">0.28</span> Commenting out</h2>
+<h2><span class="header-section-number">0.29</span> Commenting out</h2>
 <ul>
 <li>Single line comment: Ctrl + 1</li>
 <li>Multi-line comment: select the lines to be commented Ctrl + 4</li>
