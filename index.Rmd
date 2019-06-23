@@ -249,6 +249,29 @@ df_1 <-
 
 **A**: `df[is.na(df)] <- 0`
 
+## Convert blank to `NA`
+
+```{r,  message=FALSE, warning=FALSE}
+library(dplyr)
+
+fake_df <-
+  data.frame(x = c(1:2, "", 3, 4, ""),
+             y = c("a", "b", "c", "", "", "d"),
+             z = c(rep(TRUE, 4), "", ""))
+
+(fake_df)
+
+converted_fake_df <- 
+  fake_df %>% 
+  mutate_all(na_if, "")
+
+(converted_fake_df)
+```
+
+**Source:** https://stackoverflow.com/questions/24172111/change-the-blank-cells-to-na
+
+
+
 ## Label y axis in ggplot2
 **Q**: How to label y axis with percent/dollar/comma sign?
 
