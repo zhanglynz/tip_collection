@@ -93,6 +93,27 @@ $360^{\circ}$
 
 **Source:** http://web.ift.uib.no/HP/LaTeX_degree.html
 
+## Use items in table
+
+```{r, eval=FALSE}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{ll}
+\hline
+x & itemized\\
+\hline
+1 & \tabitem $x<1$\\
+  & \tabitem $1\le x \le 2$\\
+  & \tabitem $x >2$\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+```
+
+**Source:** https://tex.stackexchange.com/questions/150492/how-to-use-itemize-in-table-environment
 
 # R tips {-}
 
@@ -360,6 +381,43 @@ p4 <- ggplot()
 # put tem together
 grid.arrange(p1, p2, p3, p4, newpage = TRUE, 
              layout_matrix = matrix(1:4, byrow = TRUE, 2, 2))
+```
+
+## Use `forcats::fct_reorder()`
+
+We can use `forcats::fct_reorder()` to easily order the bars.
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(gridExtra)
+
+fake_data <- 
+  data.frame(category = c('d', 'b', 'a', 'c'),
+             prop = c(0.5, 0.3, 0.15, 0.05)) 
+p_1 <- 
+  fake_data %>% 
+  ggplot(aes(x = category, weight = prop)) +
+  geom_bar(width = 0.5, fill = 'red') +
+  coord_flip() +
+  labs(x = "", y = "")
+
+# the working of fct_reorder
+# > y <- fct_reorder(fake_data$category, fake_data$prop)
+# > y
+# [1] d b a c
+# Levels: c a b d
+
+p_2 <- 
+  fake_data %>% 
+  ggplot(aes(x = fct_reorder(category, prop), weight = prop)) +
+  geom_bar(width = 0.5, fill = 'blue') +
+  coord_flip() +
+  labs(x = "", y = "")
+
+grid.arrange(p_1, p_2, newpage = TRUE, 
+             layout_matrix = matrix(1:2, byrow = TRUE, 1, 2))
 ```
 
 
