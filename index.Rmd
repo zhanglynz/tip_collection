@@ -153,6 +153,39 @@ my_df <-
   summarise(mean_cyl=mean(cyl))
 ```
 
+## Grouped grand summary
+
+```{r, eval=FALSE}
+library(tidyverse)
+
+# > as.integer(Sys.Date())
+# [1] 18290
+set.seed(18290)
+
+fk_data <- 
+  tibble(x = sample(letters[1:4], 12, replace = TRUE),
+         y = rnorm(12),
+         z = runif(12),
+         w = rchisq(12, df = 5))
+
+# method 1
+the_summary_a <-
+  fk_data %>%
+  group_by(x) %>%
+  group_modify(function(x, ...) map_dfr(x, sum)) %>%
+  ungroup()
+
+# method 2
+the_summary_b <-
+  fk_data %>%
+  group_by(x) %>%
+  summarise_all(.funs = sum)
+
+(list(the_summary_a, the_summary_b))
+identical(the_summary_a, the_summary_b)
+```
+
+
 ## Add an extra column 
 **Q**: How to add a column to a dataframe?
 
@@ -250,6 +283,21 @@ df_1 <-
 (df_2 <- filter(df_1, grepl("-", x)))
 
 ```
+
+## Print string without quote
+
+```{r, eval=FALSE}
+df <- data.frame(x = 1:3,
+                 y = 2:4,
+                 z = 3:5)
+(noquote(names(df)))
+```
+
+## Find if a tibble is grouped
+
+`is_grouped_df()`
+
+**Reference:** https://stackoverflow.com/questions/42655746/determine-if-a-tibble-is-grouped-or-not
 
 
 
