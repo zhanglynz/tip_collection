@@ -284,6 +284,19 @@ df_1 <-
 
 ```
 
+## Use `cut()`
+
+```{r, warning = FALSE, message = FALSE}
+code_tempreture <- function(x)
+{the_interval <- cut(x, breaks = c(-Inf, 0, 10, 20, 30, +Inf),
+                     labels = c('freezing', 'cold', 'cool',                                   'warm', 'hot'))
+as.vector(the_interval)
+}
+x <- runif(10, -10, 40)
+(test_re <- code_tempreture(x))
+```
+
+
 ## Print string without quote
 
 ```{r, eval=FALSE}
@@ -430,6 +443,32 @@ p4 <- ggplot()
 grid.arrange(p1, p2, p3, p4, newpage = TRUE, 
              layout_matrix = matrix(1:4, byrow = TRUE, 2, 2))
 ```
+
+## `gridExtra` and `patchwork` packages
+
+```{r, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(gridExtra)
+# library(patchwork)
+
+r <- function() data.frame(x = rnorm(100), y = rnorm(100))
+
+p <- function() ggplot(data = r(), aes(x, y)) + geom_point()
+
+# (p() | p()) / p()
+
+g1 <- arrangeGrob(grobs = list(p(), p()), layout_matrix = matrix(1:2, ncol = 2, byrow = TRUE))
+g2 <- arrangeGrob(grobs = list(p()), nrow = 1, ncol = 1)
+
+grid.arrange(g1, g2, nrow = 2)
+```
+
+**Source:** 
+
+https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html
+
+https://www.r-bloggers.com/how-to-plot-with-patchwork/
+
 
 ## Use `forcats::fct_reorder()`
 
