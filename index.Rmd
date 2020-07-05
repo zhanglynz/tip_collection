@@ -507,7 +507,21 @@ grid.arrange(p_1, p_2, newpage = TRUE,
              layout_matrix = matrix(1:2, byrow = TRUE, 1, 2))
 ```
 
+## Use rowMeans under mutate
 
+```{r}
+fk_data <-
+  data.frame(ID = 1:5, 
+             x = 1:5,
+             y = 2:6,
+             z = 3:7)
+new_data <-
+  fk_data %>%
+  mutate(the_mean = rowMeans(.[, 2:4]))
+new_data
+```
+
+**Source**: https://stackoverflow.com/questions/33401788/dplyr-using-mutate-like-rowmeans
 
 ## List loaded packages
 **Q**: How to list the packages currently loaded into R's work space? 
