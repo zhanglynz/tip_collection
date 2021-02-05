@@ -208,6 +208,25 @@ df_a <- data.frame(x = letters[8:10], y = 1:3)
 (df_b <- add_row(df_a, x = "x", y = 10, .before = 1))
 
 ```
+## Arrangin rows in custom order
+
+```{r, message=FALSE, warning=FALSE}
+library(dplyr)
+
+fk_data <- 
+  data.frame(x = sample(LETTERS[1:6], 20, replace = TRUE),
+             y = rnorm(20))
+
+my_order <- c("A", "F", "B", "E", "C", "D")
+
+ordered_df <- 
+  fk_data %>% 
+  arrange(match(x, my_order), desc(y))
+
+ordered_df
+```
+
+**Source:** https://stackoverflow.com/questions/46129322/arranging-rows-in-custom-order-using-dplyr/46129338
 
 
 ## De-duplicate a dataframe
