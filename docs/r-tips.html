@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Useful Tips</title>
-  <meta name="description" content="Useful Tips">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R tips | Useful Tips</title>
+  <meta name="description" content="R tips | Useful Tips" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Useful Tips" />
+  <meta property="og:title" content="R tips | Useful Tips" />
   <meta property="og:type" content="book" />
   
   
@@ -17,29 +16,33 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Useful Tips" />
+  <meta name="twitter:title" content="R tips | Useful Tips" />
   
   
   
 
-<meta name="author" content="Lingyun Zhang">
+<meta name="author" content="Lingyun Zhang" />
 
 
-<meta name="date" content="2021-03-21">
+<meta name="date" content="2022-03-05" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="tex-tips.html">
-<link rel="next" href="python-tips.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="tex-tips.html"/>
+<link rel="next" href="python-tips.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -47,52 +50,83 @@
 
 
 
-<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.7.1/plotly.js"></script>
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
-<link href="libs/plotlyjs-1.29.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotlyjs-1.29.2/plotly-latest.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 </head>
 
@@ -107,7 +141,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="" data-path="tex-tips.html"><a href="tex-tips.html"><i class="fa fa-check"></i>Tex tips</a><ul>
+<li class="chapter" data-level="" data-path="tex-tips.html"><a href="tex-tips.html"><i class="fa fa-check"></i>Tex tips</a>
+<ul>
 <li class="chapter" data-level="0.1" data-path="tex-tips.html"><a href="tex-tips.html#commenting-in-winedt"><i class="fa fa-check"></i><b>0.1</b> Commenting in WinEdt</a></li>
 <li class="chapter" data-level="0.2" data-path="tex-tips.html"><a href="tex-tips.html#rotate-a-table"><i class="fa fa-check"></i><b>0.2</b> Rotate a table</a></li>
 <li class="chapter" data-level="0.3" data-path="tex-tips.html"><a href="tex-tips.html#multiple-rows-in-a-table"><i class="fa fa-check"></i><b>0.3</b> Multiple rows in a table</a></li>
@@ -115,42 +150,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.5" data-path="tex-tips.html"><a href="tex-tips.html#type-degree"><i class="fa fa-check"></i><b>0.5</b> Type degree</a></li>
 <li class="chapter" data-level="0.6" data-path="tex-tips.html"><a href="tex-tips.html#use-items-in-table"><i class="fa fa-check"></i><b>0.6</b> Use items in table</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="r-tips.html"><a href="r-tips.html"><i class="fa fa-check"></i>R tips</a><ul>
+<li class="chapter" data-level="" data-path="r-tips.html"><a href="r-tips.html"><i class="fa fa-check"></i>R tips</a>
+<ul>
 <li class="chapter" data-level="0.7" data-path="r-tips.html"><a href="r-tips.html#testing-character0-in-if-statement"><i class="fa fa-check"></i><b>0.7</b> Testing <code>character(0)</code> in <code>if</code> statement</a></li>
 <li class="chapter" data-level="0.8" data-path="r-tips.html"><a href="r-tips.html#removingkeeping-objects"><i class="fa fa-check"></i><b>0.8</b> Removing/keeping objects</a></li>
-<li class="chapter" data-level="0.9" data-path="r-tips.html"><a href="r-tips.html#programming-with-dplyr"><i class="fa fa-check"></i><b>0.9</b> Programming with dplyr</a></li>
-<li class="chapter" data-level="0.10" data-path="r-tips.html"><a href="r-tips.html#grouped-grand-summary"><i class="fa fa-check"></i><b>0.10</b> Grouped grand summary</a></li>
-<li class="chapter" data-level="0.11" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-column"><i class="fa fa-check"></i><b>0.11</b> Add an extra column</a></li>
-<li class="chapter" data-level="0.12" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-row"><i class="fa fa-check"></i><b>0.12</b> Add an extra row</a></li>
-<li class="chapter" data-level="0.13" data-path="r-tips.html"><a href="r-tips.html#arrangin-rows-in-custom-order"><i class="fa fa-check"></i><b>0.13</b> Arrangin rows in custom order</a></li>
-<li class="chapter" data-level="0.14" data-path="r-tips.html"><a href="r-tips.html#de-duplicate-a-dataframe"><i class="fa fa-check"></i><b>0.14</b> De-duplicate a dataframe</a></li>
-<li class="chapter" data-level="0.15" data-path="r-tips.html"><a href="r-tips.html#anti--and-semi-join"><i class="fa fa-check"></i><b>0.15</b> Anti- and semi-join</a></li>
-<li class="chapter" data-level="0.16" data-path="r-tips.html"><a href="r-tips.html#simple-recoding"><i class="fa fa-check"></i><b>0.16</b> Simple recoding</a></li>
-<li class="chapter" data-level="0.17" data-path="r-tips.html"><a href="r-tips.html#use-grepl-to-filter"><i class="fa fa-check"></i><b>0.17</b> Use <code>grepl()</code> to filter</a></li>
-<li class="chapter" data-level="0.18" data-path="r-tips.html"><a href="r-tips.html#use-cut"><i class="fa fa-check"></i><b>0.18</b> Use <code>cut()</code></a></li>
-<li class="chapter" data-level="0.19" data-path="r-tips.html"><a href="r-tips.html#print-string-without-quote"><i class="fa fa-check"></i><b>0.19</b> Print string without quote</a></li>
-<li class="chapter" data-level="0.20" data-path="r-tips.html"><a href="r-tips.html#find-if-a-tibble-is-grouped"><i class="fa fa-check"></i><b>0.20</b> Find if a tibble is grouped</a></li>
-<li class="chapter" data-level="0.21" data-path="r-tips.html"><a href="r-tips.html#find-number-of-nas"><i class="fa fa-check"></i><b>0.21</b> Find number of NA’s</a></li>
-<li class="chapter" data-level="0.22" data-path="r-tips.html"><a href="r-tips.html#subset-a-dataframe-by-na"><i class="fa fa-check"></i><b>0.22</b> Subset a dataframe by NA</a></li>
-<li class="chapter" data-level="0.23" data-path="r-tips.html"><a href="r-tips.html#covert-na-to-0"><i class="fa fa-check"></i><b>0.23</b> Covert NA to 0</a></li>
-<li class="chapter" data-level="0.24" data-path="r-tips.html"><a href="r-tips.html#convert-blank-to-na"><i class="fa fa-check"></i><b>0.24</b> Convert blank to <code>NA</code></a></li>
-<li class="chapter" data-level="0.25" data-path="r-tips.html"><a href="r-tips.html#label-y-axis-in-ggplot2"><i class="fa fa-check"></i><b>0.25</b> Label y axis in ggplot2</a></li>
-<li class="chapter" data-level="0.26" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-ggplot2"><i class="fa fa-check"></i><b>0.26</b> Set plot margins in ggplot2</a></li>
-<li class="chapter" data-level="0.27" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-base-r"><i class="fa fa-check"></i><b>0.27</b> Set plot margins in base R</a></li>
-<li class="chapter" data-level="0.28" data-path="r-tips.html"><a href="r-tips.html#deal-with-long-labels-in-ggplot2"><i class="fa fa-check"></i><b>0.28</b> Deal with long labels in ggplot2</a></li>
-<li class="chapter" data-level="0.29" data-path="r-tips.html"><a href="r-tips.html#edit-plotly-object"><i class="fa fa-check"></i><b>0.29</b> Edit plotly object</a></li>
-<li class="chapter" data-level="0.30" data-path="r-tips.html"><a href="r-tips.html#zoom-in-on-a-barchart"><i class="fa fa-check"></i><b>0.30</b> Zoom in on a barchart</a></li>
-<li class="chapter" data-level="0.31" data-path="r-tips.html"><a href="r-tips.html#gridextra-and-patchwork-packages"><i class="fa fa-check"></i><b>0.31</b> <code>gridExtra</code> and <code>patchwork</code> packages</a></li>
-<li class="chapter" data-level="0.32" data-path="r-tips.html"><a href="r-tips.html#use-forcatsfct_reorder"><i class="fa fa-check"></i><b>0.32</b> Use <code>forcats::fct_reorder()</code></a></li>
-<li class="chapter" data-level="0.33" data-path="r-tips.html"><a href="r-tips.html#use-rowmeans-under-mutate"><i class="fa fa-check"></i><b>0.33</b> Use rowMeans under mutate</a></li>
-<li class="chapter" data-level="0.34" data-path="r-tips.html"><a href="r-tips.html#list-loaded-packages"><i class="fa fa-check"></i><b>0.34</b> List loaded packages</a></li>
-<li class="chapter" data-level="0.35" data-path="r-tips.html"><a href="r-tips.html#function-names-in-a-loaded-package"><i class="fa fa-check"></i><b>0.35</b> Function names in a loaded package</a></li>
-<li class="chapter" data-level="0.36" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.36</b> Vectorize a matrix</a></li>
+<li class="chapter" data-level="0.9" data-path="r-tips.html"><a href="r-tips.html#creating-frequency-table"><i class="fa fa-check"></i><b>0.9</b> Creating frequency table</a></li>
+<li class="chapter" data-level="0.10" data-path="r-tips.html"><a href="r-tips.html#programming-with-dplyr"><i class="fa fa-check"></i><b>0.10</b> Programming with dplyr</a></li>
+<li class="chapter" data-level="0.11" data-path="r-tips.html"><a href="r-tips.html#grouped-grand-summary"><i class="fa fa-check"></i><b>0.11</b> Grouped grand summary</a></li>
+<li class="chapter" data-level="0.12" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-column"><i class="fa fa-check"></i><b>0.12</b> Add an extra column</a></li>
+<li class="chapter" data-level="0.13" data-path="r-tips.html"><a href="r-tips.html#add-an-extra-row"><i class="fa fa-check"></i><b>0.13</b> Add an extra row</a></li>
+<li class="chapter" data-level="0.14" data-path="r-tips.html"><a href="r-tips.html#arrangin-rows-in-custom-order"><i class="fa fa-check"></i><b>0.14</b> Arrangin rows in custom order</a></li>
+<li class="chapter" data-level="0.15" data-path="r-tips.html"><a href="r-tips.html#de-duplicate-a-dataframe"><i class="fa fa-check"></i><b>0.15</b> De-duplicate a dataframe</a></li>
+<li class="chapter" data-level="0.16" data-path="r-tips.html"><a href="r-tips.html#anti--and-semi-join"><i class="fa fa-check"></i><b>0.16</b> Anti- and semi-join</a></li>
+<li class="chapter" data-level="0.17" data-path="r-tips.html"><a href="r-tips.html#simple-recoding"><i class="fa fa-check"></i><b>0.17</b> Simple recoding</a></li>
+<li class="chapter" data-level="0.18" data-path="r-tips.html"><a href="r-tips.html#use-grepl-to-filter"><i class="fa fa-check"></i><b>0.18</b> Use <code>grepl()</code> to filter</a></li>
+<li class="chapter" data-level="0.19" data-path="r-tips.html"><a href="r-tips.html#use-cut"><i class="fa fa-check"></i><b>0.19</b> Use <code>cut()</code></a></li>
+<li class="chapter" data-level="0.20" data-path="r-tips.html"><a href="r-tips.html#print-string-without-quote"><i class="fa fa-check"></i><b>0.20</b> Print string without quote</a></li>
+<li class="chapter" data-level="0.21" data-path="r-tips.html"><a href="r-tips.html#find-if-a-tibble-is-grouped"><i class="fa fa-check"></i><b>0.21</b> Find if a tibble is grouped</a></li>
+<li class="chapter" data-level="0.22" data-path="r-tips.html"><a href="r-tips.html#find-number-of-nas"><i class="fa fa-check"></i><b>0.22</b> Find number of NA’s</a></li>
+<li class="chapter" data-level="0.23" data-path="r-tips.html"><a href="r-tips.html#subset-a-dataframe-by-na"><i class="fa fa-check"></i><b>0.23</b> Subset a dataframe by NA</a></li>
+<li class="chapter" data-level="0.24" data-path="r-tips.html"><a href="r-tips.html#covert-na-to-0"><i class="fa fa-check"></i><b>0.24</b> Covert NA to 0</a></li>
+<li class="chapter" data-level="0.25" data-path="r-tips.html"><a href="r-tips.html#convert-blank-to-na"><i class="fa fa-check"></i><b>0.25</b> Convert blank to <code>NA</code></a></li>
+<li class="chapter" data-level="0.26" data-path="r-tips.html"><a href="r-tips.html#label-y-axis-in-ggplot2"><i class="fa fa-check"></i><b>0.26</b> Label y axis in ggplot2</a></li>
+<li class="chapter" data-level="0.27" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-ggplot2"><i class="fa fa-check"></i><b>0.27</b> Set plot margins in ggplot2</a></li>
+<li class="chapter" data-level="0.28" data-path="r-tips.html"><a href="r-tips.html#set-plot-margins-in-base-r"><i class="fa fa-check"></i><b>0.28</b> Set plot margins in base R</a></li>
+<li class="chapter" data-level="0.29" data-path="r-tips.html"><a href="r-tips.html#deal-with-long-labels-in-ggplot2"><i class="fa fa-check"></i><b>0.29</b> Deal with long labels in ggplot2</a></li>
+<li class="chapter" data-level="0.30" data-path="r-tips.html"><a href="r-tips.html#edit-plotly-object"><i class="fa fa-check"></i><b>0.30</b> Edit plotly object</a></li>
+<li class="chapter" data-level="0.31" data-path="r-tips.html"><a href="r-tips.html#zoom-in-on-a-barchart"><i class="fa fa-check"></i><b>0.31</b> Zoom in on a barchart</a></li>
+<li class="chapter" data-level="0.32" data-path="r-tips.html"><a href="r-tips.html#gridextra-and-patchwork-packages"><i class="fa fa-check"></i><b>0.32</b> <code>gridExtra</code> and <code>patchwork</code> packages</a></li>
+<li class="chapter" data-level="0.33" data-path="r-tips.html"><a href="r-tips.html#use-forcatsfct_reorder"><i class="fa fa-check"></i><b>0.33</b> Use <code>forcats::fct_reorder()</code></a></li>
+<li class="chapter" data-level="0.34" data-path="r-tips.html"><a href="r-tips.html#use-rowmeans-under-mutate"><i class="fa fa-check"></i><b>0.34</b> Use rowMeans under mutate</a></li>
+<li class="chapter" data-level="0.35" data-path="r-tips.html"><a href="r-tips.html#list-loaded-packages"><i class="fa fa-check"></i><b>0.35</b> List loaded packages</a></li>
+<li class="chapter" data-level="0.36" data-path="r-tips.html"><a href="r-tips.html#function-names-in-a-loaded-package"><i class="fa fa-check"></i><b>0.36</b> Function names in a loaded package</a></li>
+<li class="chapter" data-level="0.37" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.37</b> Vectorize a matrix</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a><ul>
-<li class="chapter" data-level="0.37" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.37</b> Viewing all defined variables</a></li>
-<li class="chapter" data-level="0.38" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.38</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
-<li class="chapter" data-level="0.39" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.39</b> Commenting out</a></li>
+<li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a>
+<ul>
+<li class="chapter" data-level="0.38" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.38</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.39" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.39</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.40" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.40</b> Commenting out</a></li>
 </ul></li>
 </ul>
 
@@ -171,134 +209,171 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="r-tips" class="section level1 unnumbered">
 <h1>R tips</h1>
-<div id="testing-character0-in-if-statement" class="section level2">
+<div id="testing-character0-in-if-statement" class="section level2" number="0.7">
 <h2><span class="header-section-number">0.7</span> Testing <code>character(0)</code> in <code>if</code> statement</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v &lt;-<span class="st"> </span><span class="kw">character</span>(<span class="dv">0</span>)
-<span class="kw">identical</span>(v, <span class="kw">character</span>(<span class="dv">0</span>))  <span class="co"># returns TRUE</span>
-
-<span class="kw">identical</span>(v, <span class="st">&quot;&quot;</span>)           <span class="co"># returns FALSE</span>
-<span class="kw">identical</span>(v, <span class="kw">numeric</span>(<span class="dv">0</span>))   <span class="co"># returns also FALSE</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="r-tips.html#cb6-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">character</span>(<span class="dv">0</span>)</span>
+<span id="cb6-2"><a href="r-tips.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(v, <span class="fu">character</span>(<span class="dv">0</span>))  <span class="co"># returns TRUE</span></span>
+<span id="cb6-3"><a href="r-tips.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="r-tips.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(v, <span class="st">&quot;&quot;</span>)           <span class="co"># returns FALSE</span></span>
+<span id="cb6-5"><a href="r-tips.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(v, <span class="fu">numeric</span>(<span class="dv">0</span>))   <span class="co"># returns also FALSE</span></span></code></pre></div>
 <p><strong>Source:</strong> <a href="https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement" class="uri">https://stackoverflow.com/questions/25640161/r-how-to-test-for-character0-in-if-statement</a></p>
 </div>
-<div id="removingkeeping-objects" class="section level2">
+<div id="removingkeeping-objects" class="section level2" number="0.8">
 <h2><span class="header-section-number">0.8</span> Removing/keeping objects</h2>
 <p><strong>Q</strong>: How to remove all objects but some from the workspace in R?</p>
 <p><strong>A</strong>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list=</span><span class="kw">ls</span>()[<span class="op">!</span><span class="st"> </span><span class="kw">ls</span>() <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>)])</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r-tips.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>()[<span class="sc">!</span> <span class="fu">ls</span>() <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>)])</span></code></pre></div>
 </div>
-<div id="programming-with-dplyr" class="section level2">
-<h2><span class="header-section-number">0.9</span> Programming with dplyr</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-cols &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;am&quot;</span>,<span class="st">&quot;gear&quot;</span>)
-grouping_vars &lt;-<span class="st"> </span>rlang<span class="op">::</span><span class="kw">syms</span>(cols)
-
-my_df &lt;-<span class="st"> </span>
-<span class="st">  </span>mtcars <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(<span class="op">!!!</span>grouping_vars) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_cyl=</span><span class="kw">mean</span>(cyl))</code></pre></div>
+<div id="creating-frequency-table" class="section level2" number="0.9">
+<h2><span class="header-section-number">0.9</span> Creating frequency table</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="r-tips.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-2"><a href="r-tips.html#cb8-2" aria-hidden="true" tabindex="-1"></a>df_ <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">sample</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-3"><a href="r-tips.html#cb8-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">y =</span> <span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-4"><a href="r-tips.html#cb8-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-5"><a href="r-tips.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># method 1</span></span>
+<span id="cb8-6"><a href="r-tips.html#cb8-6" aria-hidden="true" tabindex="-1"></a>tab1 <span class="ot">&lt;-</span> <span class="fu">table</span>(df_<span class="sc">$</span>x, df_<span class="sc">$</span>y)</span>
+<span id="cb8-7"><a href="r-tips.html#cb8-7" aria-hidden="true" tabindex="-1"></a>the_df_1 <span class="ot">&lt;-</span> </span>
+<span id="cb8-8"><a href="r-tips.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame.matrix</span>(tab1) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-9"><a href="r-tips.html#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_column</span>(<span class="at">x =</span> <span class="fu">row.names</span>(tab1), <span class="at">.before =</span> <span class="dv">1</span>)</span>
+<span id="cb8-10"><a href="r-tips.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(the_df_1) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb8-11"><a href="r-tips.html#cb8-11" aria-hidden="true" tabindex="-1"></a>(the_df_1)</span></code></pre></div>
+<pre><code>##   x A B C D E
+## 1 a 5 5 4 4 7
+## 2 b 6 2 6 4 4
+## 3 c 2 2 6 5 7
+## 4 d 6 6 1 2 0
+## 5 e 1 1 4 5 5</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="r-tips.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># method 2</span></span>
+<span id="cb10-2"><a href="r-tips.html#cb10-2" aria-hidden="true" tabindex="-1"></a>the_df_2 <span class="ot">&lt;-</span> </span>
+<span id="cb10-3"><a href="r-tips.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  df_ <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="r-tips.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(x, y) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="r-tips.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> x,</span>
+<span id="cb10-6"><a href="r-tips.html#cb10-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">names_from =</span> y,</span>
+<span id="cb10-7"><a href="r-tips.html#cb10-7" aria-hidden="true" tabindex="-1"></a>                     <span class="at">values_from =</span> n) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-8"><a href="r-tips.html#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="at">.fns =</span> <span class="sc">~</span><span class="fu">replace_na</span>(.,<span class="dv">0</span>)))</span>
+<span id="cb10-9"><a href="r-tips.html#cb10-9" aria-hidden="true" tabindex="-1"></a>(the_df_2)</span></code></pre></div>
+<pre><code>## # A tibble: 5 x 6
+##   x         A     B     C     D     E
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 a         5     5     4     4     7
+## 2 b         6     2     6     4     4
+## 3 c         2     2     6     5     7
+## 4 d         6     6     1     2     0
+## 5 e         1     1     4     5     5</code></pre>
 </div>
-<div id="grouped-grand-summary" class="section level2">
-<h2><span class="header-section-number">0.10</span> Grouped grand summary</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-
-<span class="co"># &gt; as.integer(Sys.Date())</span>
-<span class="co"># [1] 18290</span>
-<span class="kw">set.seed</span>(<span class="dv">18290</span>)
-
-fk_data &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">sample</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">12</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>),
-         <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">12</span>),
-         <span class="dt">z =</span> <span class="kw">runif</span>(<span class="dv">12</span>),
-         <span class="dt">w =</span> <span class="kw">rchisq</span>(<span class="dv">12</span>, <span class="dt">df =</span> <span class="dv">5</span>))
-
-<span class="co"># method 1</span>
-the_summary_a &lt;-
-<span class="st">  </span>fk_data <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(x) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_modify</span>(<span class="cf">function</span>(x, ...) <span class="kw">map_dfr</span>(x, sum)) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">ungroup</span>()
-
-<span class="co"># method 2</span>
-the_summary_b &lt;-
-<span class="st">  </span>fk_data <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(x) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarise_all</span>(<span class="dt">.funs =</span> sum)
-
-(<span class="kw">list</span>(the_summary_a, the_summary_b))
-<span class="kw">identical</span>(the_summary_a, the_summary_b)</code></pre></div>
+<div id="programming-with-dplyr" class="section level2" number="0.10">
+<h2><span class="header-section-number">0.10</span> Programming with dplyr</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="r-tips.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb12-2"><a href="r-tips.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="r-tips.html#cb12-3" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;am&quot;</span>,<span class="st">&quot;gear&quot;</span>)</span>
+<span id="cb12-4"><a href="r-tips.html#cb12-4" aria-hidden="true" tabindex="-1"></a>grouping_vars <span class="ot">&lt;-</span> rlang<span class="sc">::</span><span class="fu">syms</span>(cols)</span>
+<span id="cb12-5"><a href="r-tips.html#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="r-tips.html#cb12-6" aria-hidden="true" tabindex="-1"></a>my_df <span class="ot">&lt;-</span> </span>
+<span id="cb12-7"><a href="r-tips.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  mtcars <span class="sc">%&gt;%</span></span>
+<span id="cb12-8"><a href="r-tips.html#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="sc">!!!</span>grouping_vars) <span class="sc">%&gt;%</span></span>
+<span id="cb12-9"><a href="r-tips.html#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_cyl=</span><span class="fu">mean</span>(cyl))</span></code></pre></div>
 </div>
-<div id="add-an-extra-column" class="section level2">
-<h2><span class="header-section-number">0.11</span> Add an extra column</h2>
+<div id="grouped-grand-summary" class="section level2" number="0.11">
+<h2><span class="header-section-number">0.11</span> Grouped grand summary</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="r-tips.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb13-2"><a href="r-tips.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="r-tips.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; as.integer(Sys.Date())</span></span>
+<span id="cb13-4"><a href="r-tips.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18290</span></span>
+<span id="cb13-5"><a href="r-tips.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">18290</span>)</span>
+<span id="cb13-6"><a href="r-tips.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="r-tips.html#cb13-7" aria-hidden="true" tabindex="-1"></a>fk_data <span class="ot">&lt;-</span> </span>
+<span id="cb13-8"><a href="r-tips.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">sample</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="dv">12</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-9"><a href="r-tips.html#cb13-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">12</span>),</span>
+<span id="cb13-10"><a href="r-tips.html#cb13-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">z =</span> <span class="fu">runif</span>(<span class="dv">12</span>),</span>
+<span id="cb13-11"><a href="r-tips.html#cb13-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">w =</span> <span class="fu">rchisq</span>(<span class="dv">12</span>, <span class="at">df =</span> <span class="dv">5</span>))</span>
+<span id="cb13-12"><a href="r-tips.html#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="r-tips.html#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># method 1</span></span>
+<span id="cb13-14"><a href="r-tips.html#cb13-14" aria-hidden="true" tabindex="-1"></a>the_summary_a <span class="ot">&lt;-</span></span>
+<span id="cb13-15"><a href="r-tips.html#cb13-15" aria-hidden="true" tabindex="-1"></a>  fk_data <span class="sc">%&gt;%</span></span>
+<span id="cb13-16"><a href="r-tips.html#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(x) <span class="sc">%&gt;%</span></span>
+<span id="cb13-17"><a href="r-tips.html#cb13-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_modify</span>(<span class="cf">function</span>(x, ...) <span class="fu">map_dfr</span>(x, sum)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-18"><a href="r-tips.html#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb13-19"><a href="r-tips.html#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="r-tips.html#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># method 2</span></span>
+<span id="cb13-21"><a href="r-tips.html#cb13-21" aria-hidden="true" tabindex="-1"></a>the_summary_b <span class="ot">&lt;-</span></span>
+<span id="cb13-22"><a href="r-tips.html#cb13-22" aria-hidden="true" tabindex="-1"></a>  fk_data <span class="sc">%&gt;%</span></span>
+<span id="cb13-23"><a href="r-tips.html#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(x) <span class="sc">%&gt;%</span></span>
+<span id="cb13-24"><a href="r-tips.html#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(<span class="at">.funs =</span> sum)</span>
+<span id="cb13-25"><a href="r-tips.html#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="r-tips.html#cb13-26" aria-hidden="true" tabindex="-1"></a>(<span class="fu">list</span>(the_summary_a, the_summary_b))</span>
+<span id="cb13-27"><a href="r-tips.html#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(the_summary_a, the_summary_b)</span></code></pre></div>
+</div>
+<div id="add-an-extra-column" class="section level2" number="0.12">
+<h2><span class="header-section-number">0.12</span> Add an extra column</h2>
 <p><strong>Q</strong>: How to add a column to a dataframe?</p>
 <p><strong>A</strong>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tibble) <span class="co"># for add_column</span>
-<span class="kw">library</span>(dplyr)
-
-df &lt;-
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">b =</span> <span class="dv">2</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">c =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">add_column</span>(<span class="dt">d =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">.after =</span> <span class="dv">2</span>)</code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="r-tips.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble) <span class="co"># for add_column</span></span>
+<span id="cb14-2"><a href="r-tips.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-3"><a href="r-tips.html#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="r-tips.html#cb14-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span></span>
+<span id="cb14-5"><a href="r-tips.html#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">b =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">c =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a href="r-tips.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_column</span>(<span class="at">d =</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">.after =</span> <span class="dv">2</span>)</span></code></pre></div>
 </div>
-<div id="add-an-extra-row" class="section level2">
-<h2><span class="header-section-number">0.12</span> Add an extra row</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tibble) <span class="co"># for add_row</span>
-
-df_a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> letters[<span class="dv">8</span><span class="op">:</span><span class="dv">10</span>], <span class="dt">y =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)
-
-(df_b &lt;-<span class="st"> </span><span class="kw">add_row</span>(df_a, <span class="dt">x =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">y =</span> <span class="dv">10</span>, <span class="dt">.before =</span> <span class="dv">1</span>))</code></pre></div>
+<div id="add-an-extra-row" class="section level2" number="0.13">
+<h2><span class="header-section-number">0.13</span> Add an extra row</h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-tips.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble) <span class="co"># for add_row</span></span>
+<span id="cb15-2"><a href="r-tips.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="r-tips.html#cb15-3" aria-hidden="true" tabindex="-1"></a>df_a <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> letters[<span class="dv">8</span><span class="sc">:</span><span class="dv">10</span>], <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb15-4"><a href="r-tips.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="r-tips.html#cb15-5" aria-hidden="true" tabindex="-1"></a>(df_b <span class="ot">&lt;-</span> <span class="fu">add_row</span>(df_a, <span class="at">x =</span> <span class="st">&quot;x&quot;</span>, <span class="at">y =</span> <span class="dv">10</span>, <span class="at">.before =</span> <span class="dv">1</span>))</span></code></pre></div>
 <pre><code>##   x  y
 ## 1 x 10
 ## 2 h  1
 ## 3 i  2
 ## 4 j  3</code></pre>
 </div>
-<div id="arrangin-rows-in-custom-order" class="section level2">
-<h2><span class="header-section-number">0.13</span> Arrangin rows in custom order</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-fk_data &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">sample</span>(LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>], <span class="dv">20</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>),
-             <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">20</span>))
-
-my_order &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>)
-
-ordered_df &lt;-<span class="st"> </span>
-<span class="st">  </span>fk_data <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">match</span>(x, my_order), <span class="kw">desc</span>(y))
-
-ordered_df</code></pre></div>
+<div id="arrangin-rows-in-custom-order" class="section level2" number="0.14">
+<h2><span class="header-section-number">0.14</span> Arrangin rows in custom order</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="r-tips.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb17-2"><a href="r-tips.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="r-tips.html#cb17-3" aria-hidden="true" tabindex="-1"></a>fk_data <span class="ot">&lt;-</span> </span>
+<span id="cb17-4"><a href="r-tips.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>], <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb17-5"><a href="r-tips.html#cb17-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">20</span>))</span>
+<span id="cb17-6"><a href="r-tips.html#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="r-tips.html#cb17-7" aria-hidden="true" tabindex="-1"></a>my_order <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;E&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>)</span>
+<span id="cb17-8"><a href="r-tips.html#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="r-tips.html#cb17-9" aria-hidden="true" tabindex="-1"></a>ordered_df <span class="ot">&lt;-</span> </span>
+<span id="cb17-10"><a href="r-tips.html#cb17-10" aria-hidden="true" tabindex="-1"></a>  fk_data <span class="sc">%&gt;%</span> </span>
+<span id="cb17-11"><a href="r-tips.html#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">match</span>(x, my_order), <span class="fu">desc</span>(y))</span>
+<span id="cb17-12"><a href="r-tips.html#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="r-tips.html#cb17-13" aria-hidden="true" tabindex="-1"></a>ordered_df</span></code></pre></div>
 <pre><code>##    x          y
-## 1  A  2.0214079
-## 2  A -1.4058174
-## 3  F  2.3689722
-## 4  F  1.0707501
-## 5  F -0.1401743
-## 6  F -0.3167470
-## 7  F -0.7227088
-## 8  F -0.9525908
-## 9  B  0.7442535
-## 10 B  0.6680120
-## 11 B -0.1919755
-## 12 B -0.2088232
-## 13 C  1.6262364
-## 14 C  0.2652227
-## 15 D  1.2659644
-## 16 D  1.0979383
-## 17 D  0.8498157
-## 18 D  0.8276749
-## 19 D -0.1467211
-## 20 D -0.1655661</code></pre>
+## 1  A  0.7398768
+## 2  A  0.4639119
+## 3  A  0.2694664
+## 4  A -1.1659066
+## 5  F -1.0190982
+## 6  F -1.2990833
+## 7  B  0.6316200
+## 8  B  0.2032427
+## 9  B -0.3520534
+## 10 B -0.3624619
+## 11 B -1.3162373
+## 12 E  0.2201748
+## 13 E  0.1160325
+## 14 E -0.3622292
+## 15 C  1.7411272
+## 16 C  0.7820941
+## 17 C  0.7214212
+## 18 C  0.3259543
+## 19 C -0.1045873
+## 20 D -2.0416101</code></pre>
 <p><strong>Source:</strong> <a href="https://stackoverflow.com/questions/46129322/arranging-rows-in-custom-order-using-dplyr/46129338" class="uri">https://stackoverflow.com/questions/46129322/arranging-rows-in-custom-order-using-dplyr/46129338</a></p>
 </div>
-<div id="de-duplicate-a-dataframe" class="section level2">
-<h2><span class="header-section-number">0.14</span> De-duplicate a dataframe</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-a_df &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">rep</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">each =</span> <span class="dv">2</span>),
-             <span class="dt">y =</span> <span class="kw">rep</span>(letters[<span class="dv">2</span><span class="op">:</span><span class="dv">4</span>], <span class="dt">each =</span> <span class="dv">2</span>),
-             <span class="dt">z =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">each =</span> <span class="dv">3</span>))
-(a_df)</code></pre></div>
+<div id="de-duplicate-a-dataframe" class="section level2" number="0.15">
+<h2><span class="header-section-number">0.15</span> De-duplicate a dataframe</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="r-tips.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb19-2"><a href="r-tips.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="r-tips.html#cb19-3" aria-hidden="true" tabindex="-1"></a>a_df <span class="ot">&lt;-</span> </span>
+<span id="cb19-4"><a href="r-tips.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rep</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">each =</span> <span class="dv">2</span>),</span>
+<span id="cb19-5"><a href="r-tips.html#cb19-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="fu">rep</span>(letters[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">each =</span> <span class="dv">2</span>),</span>
+<span id="cb19-6"><a href="r-tips.html#cb19-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">z =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">each =</span> <span class="dv">3</span>))</span>
+<span id="cb19-7"><a href="r-tips.html#cb19-7" aria-hidden="true" tabindex="-1"></a>(a_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 a b 1
 ## 2 a b 1
@@ -306,33 +381,33 @@ a_df &lt;-<span class="st"> </span>
 ## 4 b c 2
 ## 5 c d 2
 ## 6 c d 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">b_df &lt;-<span class="st"> </span>
-<span class="st">  </span>a_df <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">distinct</span>()
-(b_df)</code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="r-tips.html#cb21-1" aria-hidden="true" tabindex="-1"></a>b_df <span class="ot">&lt;-</span> </span>
+<span id="cb21-2"><a href="r-tips.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  a_df <span class="sc">%&gt;%</span> </span>
+<span id="cb21-3"><a href="r-tips.html#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb21-4"><a href="r-tips.html#cb21-4" aria-hidden="true" tabindex="-1"></a>(b_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 a b 1
 ## 2 b c 1
 ## 3 b c 2
 ## 4 c d 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">c_df &lt;-<span class="st"> </span>
-<span class="st">  </span>a_df <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">distinct</span>(x, y, <span class="dt">.keep_all =</span> <span class="ot">TRUE</span>)
-(c_df)</code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="r-tips.html#cb23-1" aria-hidden="true" tabindex="-1"></a>c_df <span class="ot">&lt;-</span> </span>
+<span id="cb23-2"><a href="r-tips.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  a_df <span class="sc">%&gt;%</span> </span>
+<span id="cb23-3"><a href="r-tips.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(x, y, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-4"><a href="r-tips.html#cb23-4" aria-hidden="true" tabindex="-1"></a>(c_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 a b 1
 ## 2 b c 1
 ## 3 c d 2</code></pre>
 </div>
-<div id="anti--and-semi-join" class="section level2">
-<h2><span class="header-section-number">0.15</span> Anti- and semi-join</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-a_df &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">rep</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">each =</span> <span class="dv">2</span>),
-             <span class="dt">y =</span> <span class="kw">rep</span>(letters[<span class="dv">2</span><span class="op">:</span><span class="dv">4</span>], <span class="dt">each =</span> <span class="dv">2</span>),
-             <span class="dt">z =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">each =</span> <span class="dv">3</span>))
-(a_df)</code></pre></div>
+<div id="anti--and-semi-join" class="section level2" number="0.16">
+<h2><span class="header-section-number">0.16</span> Anti- and semi-join</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="r-tips.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb25-2"><a href="r-tips.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="r-tips.html#cb25-3" aria-hidden="true" tabindex="-1"></a>a_df <span class="ot">&lt;-</span> </span>
+<span id="cb25-4"><a href="r-tips.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rep</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">each =</span> <span class="dv">2</span>),</span>
+<span id="cb25-5"><a href="r-tips.html#cb25-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="fu">rep</span>(letters[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">each =</span> <span class="dv">2</span>),</span>
+<span id="cb25-6"><a href="r-tips.html#cb25-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">z =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">each =</span> <span class="dv">3</span>))</span>
+<span id="cb25-7"><a href="r-tips.html#cb25-7" aria-hidden="true" tabindex="-1"></a>(a_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 a b 1
 ## 2 a b 1
@@ -340,103 +415,102 @@ a_df &lt;-<span class="st"> </span>
 ## 4 b c 2
 ## 5 c d 2
 ## 6 c d 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">c_df &lt;-<span class="st"> </span>
-<span class="st">  </span>a_df <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">distinct</span>(x, y, <span class="dt">.keep_all =</span> <span class="ot">TRUE</span>)
-(c_df)</code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="r-tips.html#cb27-1" aria-hidden="true" tabindex="-1"></a>c_df <span class="ot">&lt;-</span> </span>
+<span id="cb27-2"><a href="r-tips.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  a_df <span class="sc">%&gt;%</span> </span>
+<span id="cb27-3"><a href="r-tips.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(x, y, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-4"><a href="r-tips.html#cb27-4" aria-hidden="true" tabindex="-1"></a>(c_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 a b 1
 ## 2 b c 1
 ## 3 c d 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d_df &lt;-<span class="st"> </span><span class="kw">semi_join</span>(a_df, c_df)
-(d_df)</code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="r-tips.html#cb29-1" aria-hidden="true" tabindex="-1"></a>d_df <span class="ot">&lt;-</span> <span class="fu">semi_join</span>(a_df, c_df)</span>
+<span id="cb29-2"><a href="r-tips.html#cb29-2" aria-hidden="true" tabindex="-1"></a>(d_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 a b 1
 ## 2 a b 1
 ## 3 b c 1
 ## 4 c d 2
 ## 5 c d 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">e_df &lt;-<span class="st"> </span><span class="kw">anti_join</span>(a_df, c_df)
-(e_df)</code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="r-tips.html#cb31-1" aria-hidden="true" tabindex="-1"></a>e_df <span class="ot">&lt;-</span> <span class="fu">anti_join</span>(a_df, c_df)</span>
+<span id="cb31-2"><a href="r-tips.html#cb31-2" aria-hidden="true" tabindex="-1"></a>(e_df)</span></code></pre></div>
 <pre><code>##   x y z
 ## 1 b c 2</code></pre>
 </div>
-<div id="simple-recoding" class="section level2">
-<h2><span class="header-section-number">0.16</span> Simple recoding</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-x &lt;-<span class="st"> </span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]
-y &lt;-<span class="st"> </span><span class="kw">recode</span>(x, <span class="dt">a =</span> <span class="st">&quot;apple&quot;</span>)
-z &lt;-<span class="st"> </span><span class="kw">recode</span>(x, <span class="dt">b =</span> <span class="st">&quot;banana&quot;</span>)
-
-<span class="kw">c</span>(y, z)</code></pre></div>
-<pre><code>##  [1] &quot;apple&quot;  &quot;b&quot;      &quot;c&quot;      &quot;d&quot;      &quot;e&quot;      &quot;a&quot;      &quot;banana&quot;
-##  [8] &quot;c&quot;      &quot;d&quot;      &quot;e&quot;</code></pre>
+<div id="simple-recoding" class="section level2" number="0.17">
+<h2><span class="header-section-number">0.17</span> Simple recoding</h2>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="r-tips.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb33-2"><a href="r-tips.html#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="r-tips.html#cb33-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb33-4"><a href="r-tips.html#cb33-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">recode</span>(x, <span class="at">a =</span> <span class="st">&quot;apple&quot;</span>)</span>
+<span id="cb33-5"><a href="r-tips.html#cb33-5" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">recode</span>(x, <span class="at">b =</span> <span class="st">&quot;banana&quot;</span>)</span>
+<span id="cb33-6"><a href="r-tips.html#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="r-tips.html#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(y, z)</span></code></pre></div>
+<pre><code>##  [1] &quot;apple&quot;  &quot;b&quot;      &quot;c&quot;      &quot;d&quot;      &quot;e&quot;      &quot;a&quot;      &quot;banana&quot; &quot;c&quot;     
+##  [9] &quot;d&quot;      &quot;e&quot;</code></pre>
 <p><strong>Source</strong>: <a href="https://dplyr.tidyverse.org/reference/recode.html" class="uri">https://dplyr.tidyverse.org/reference/recode.html</a></p>
 </div>
-<div id="use-grepl-to-filter" class="section level2">
-<h2><span class="header-section-number">0.17</span> Use <code>grepl()</code> to filter</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-df_<span class="dv">1</span> &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;x-18&quot;</span>, <span class="kw">sample</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dv">3</span>), <span class="st">&quot;a-18&quot;</span>, <span class="st">&quot;b-18&quot;</span>), <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">6</span>))
-
-<span class="co"># get the rows where x contains &#39;-&#39;</span>
-(df_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">filter</span>(df_<span class="dv">1</span>, <span class="kw">grepl</span>(<span class="st">&quot;-&quot;</span>, x)))</code></pre></div>
-<pre><code>##      x          y
-## 1 x-18 -2.3223408
-## 2 a-18 -0.5795798
-## 3 b-18 -0.1106779</code></pre>
+<div id="use-grepl-to-filter" class="section level2" number="0.18">
+<h2><span class="header-section-number">0.18</span> Use <code>grepl()</code> to filter</h2>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="r-tips.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb35-2"><a href="r-tips.html#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="r-tips.html#cb35-3" aria-hidden="true" tabindex="-1"></a>df_1 <span class="ot">&lt;-</span> </span>
+<span id="cb35-4"><a href="r-tips.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">&quot;x-18&quot;</span>, <span class="fu">sample</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="dv">3</span>), <span class="st">&quot;a-18&quot;</span>, <span class="st">&quot;b-18&quot;</span>), <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">6</span>))</span>
+<span id="cb35-5"><a href="r-tips.html#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="r-tips.html#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># get the rows where x contains &#39;-&#39;</span></span>
+<span id="cb35-7"><a href="r-tips.html#cb35-7" aria-hidden="true" tabindex="-1"></a>(df_2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(df_1, <span class="fu">grepl</span>(<span class="st">&quot;-&quot;</span>, x)))</span></code></pre></div>
+<pre><code>##      x           y
+## 1 x-18  0.69856221
+## 2 a-18 -0.09186141
+## 3 b-18  1.39739590</code></pre>
 </div>
-<div id="use-cut" class="section level2">
-<h2><span class="header-section-number">0.18</span> Use <code>cut()</code></h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">code_tempreture &lt;-<span class="st"> </span><span class="cf">function</span>(x)
-{the_interval &lt;-<span class="st"> </span><span class="kw">cut</span>(x, <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="op">-</span><span class="ot">Inf</span>, <span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="op">+</span><span class="ot">Inf</span>),
-                     <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&#39;freezing&#39;</span>, <span class="st">&#39;cold&#39;</span>, <span class="st">&#39;cool&#39;</span>,                                   <span class="st">&#39;warm&#39;</span>, <span class="st">&#39;hot&#39;</span>))
-<span class="kw">as.vector</span>(the_interval)
-}
-x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>, <span class="op">-</span><span class="dv">10</span>, <span class="dv">40</span>)
-(test_re &lt;-<span class="st"> </span><span class="kw">code_tempreture</span>(x))</code></pre></div>
-<pre><code>##  [1] &quot;freezing&quot; &quot;warm&quot;     &quot;hot&quot;      &quot;hot&quot;      &quot;cool&quot;     &quot;hot&quot;     
-##  [7] &quot;cold&quot;     &quot;warm&quot;     &quot;warm&quot;     &quot;warm&quot;</code></pre>
+<div id="use-cut" class="section level2" number="0.19">
+<h2><span class="header-section-number">0.19</span> Use <code>cut()</code></h2>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="r-tips.html#cb37-1" aria-hidden="true" tabindex="-1"></a>code_tempreture <span class="ot">&lt;-</span> <span class="cf">function</span>(x)</span>
+<span id="cb37-2"><a href="r-tips.html#cb37-2" aria-hidden="true" tabindex="-1"></a>{the_interval <span class="ot">&lt;-</span> <span class="fu">cut</span>(x, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, <span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="sc">+</span><span class="cn">Inf</span>),</span>
+<span id="cb37-3"><a href="r-tips.html#cb37-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&#39;freezing&#39;</span>, <span class="st">&#39;cold&#39;</span>, <span class="st">&#39;cool&#39;</span>,                                   <span class="st">&#39;warm&#39;</span>, <span class="st">&#39;hot&#39;</span>))</span>
+<span id="cb37-4"><a href="r-tips.html#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">as.vector</span>(the_interval)</span>
+<span id="cb37-5"><a href="r-tips.html#cb37-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-6"><a href="r-tips.html#cb37-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">40</span>)</span>
+<span id="cb37-7"><a href="r-tips.html#cb37-7" aria-hidden="true" tabindex="-1"></a>(test_re <span class="ot">&lt;-</span> <span class="fu">code_tempreture</span>(x))</span></code></pre></div>
+<pre><code>##  [1] &quot;cold&quot; &quot;cold&quot; &quot;warm&quot; &quot;hot&quot;  &quot;warm&quot; &quot;cool&quot; &quot;cold&quot; &quot;cold&quot; &quot;cool&quot; &quot;cold&quot;</code></pre>
 </div>
-<div id="print-string-without-quote" class="section level2">
-<h2><span class="header-section-number">0.19</span> Print string without quote</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>,
-                 <span class="dt">y =</span> <span class="dv">2</span><span class="op">:</span><span class="dv">4</span>,
-                 <span class="dt">z =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">5</span>)
-(<span class="kw">noquote</span>(<span class="kw">names</span>(df)))</code></pre></div>
+<div id="print-string-without-quote" class="section level2" number="0.20">
+<h2><span class="header-section-number">0.20</span> Print string without quote</h2>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="r-tips.html#cb39-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb39-2"><a href="r-tips.html#cb39-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb39-3"><a href="r-tips.html#cb39-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">z =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb39-4"><a href="r-tips.html#cb39-4" aria-hidden="true" tabindex="-1"></a>(<span class="fu">noquote</span>(<span class="fu">names</span>(df)))</span></code></pre></div>
 </div>
-<div id="find-if-a-tibble-is-grouped" class="section level2">
-<h2><span class="header-section-number">0.20</span> Find if a tibble is grouped</h2>
+<div id="find-if-a-tibble-is-grouped" class="section level2" number="0.21">
+<h2><span class="header-section-number">0.21</span> Find if a tibble is grouped</h2>
 <p><code>is_grouped_df()</code></p>
 <p><strong>Reference:</strong> <a href="https://stackoverflow.com/questions/42655746/determine-if-a-tibble-is-grouped-or-not" class="uri">https://stackoverflow.com/questions/42655746/determine-if-a-tibble-is-grouped-or-not</a></p>
 </div>
-<div id="find-number-of-nas" class="section level2">
-<h2><span class="header-section-number">0.21</span> Find number of NA’s</h2>
+<div id="find-number-of-nas" class="section level2" number="0.22">
+<h2><span class="header-section-number">0.22</span> Find number of NA’s</h2>
 <p><strong>Q</strong>: How to check NA’s in a dataframe?</p>
 <p><strong>A</strong>: <code>colSums(is.na(df))</code></p>
 </div>
-<div id="subset-a-dataframe-by-na" class="section level2">
-<h2><span class="header-section-number">0.22</span> Subset a dataframe by NA</h2>
+<div id="subset-a-dataframe-by-na" class="section level2" number="0.23">
+<h2><span class="header-section-number">0.23</span> Subset a dataframe by NA</h2>
 <p><strong>Q</strong>: How to get the rows which have NA’s in a dataframe?</p>
 <p><strong>A</strong>: <code>new_DF &lt;- DF[rowSums(is.na(DF)) &gt; 0, ]</code></p>
 </div>
-<div id="covert-na-to-0" class="section level2">
-<h2><span class="header-section-number">0.23</span> Covert NA to 0</h2>
+<div id="covert-na-to-0" class="section level2" number="0.24">
+<h2><span class="header-section-number">0.24</span> Covert NA to 0</h2>
 <p><strong>Q</strong>: How to convert NA to 0 in a dataframe?</p>
 <p><strong>A</strong>: <code>df[is.na(df)] &lt;- 0</code></p>
 </div>
-<div id="convert-blank-to-na" class="section level2">
-<h2><span class="header-section-number">0.24</span> Convert blank to <code>NA</code></h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-
-fake_df &lt;-
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="st">&quot;&quot;</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="st">&quot;&quot;</span>),
-             <span class="dt">y =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="st">&quot;d&quot;</span>),
-             <span class="dt">z =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="ot">TRUE</span>, <span class="dv">4</span>), <span class="st">&quot;&quot;</span>, <span class="st">&quot;&quot;</span>))
-
-(fake_df)</code></pre></div>
+<div id="convert-blank-to-na" class="section level2" number="0.25">
+<h2><span class="header-section-number">0.25</span> Convert blank to <code>NA</code></h2>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="r-tips.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb40-2"><a href="r-tips.html#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="r-tips.html#cb40-3" aria-hidden="true" tabindex="-1"></a>fake_df <span class="ot">&lt;-</span></span>
+<span id="cb40-4"><a href="r-tips.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="st">&quot;&quot;</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="st">&quot;&quot;</span>),</span>
+<span id="cb40-5"><a href="r-tips.html#cb40-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="st">&quot;d&quot;</span>),</span>
+<span id="cb40-6"><a href="r-tips.html#cb40-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">z =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="cn">TRUE</span>, <span class="dv">4</span>), <span class="st">&quot;&quot;</span>, <span class="st">&quot;&quot;</span>))</span>
+<span id="cb40-7"><a href="r-tips.html#cb40-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-8"><a href="r-tips.html#cb40-8" aria-hidden="true" tabindex="-1"></a>(fake_df)</span></code></pre></div>
 <pre><code>##   x y    z
 ## 1 1 a TRUE
 ## 2 2 b TRUE
@@ -444,11 +518,11 @@ fake_df &lt;-
 ## 4 3   TRUE
 ## 5 4       
 ## 6   d</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">converted_fake_df &lt;-<span class="st"> </span>
-<span class="st">  </span>fake_df <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate_all</span>(na_if, <span class="st">&quot;&quot;</span>)
-
-(converted_fake_df)</code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-tips.html#cb42-1" aria-hidden="true" tabindex="-1"></a>converted_fake_df <span class="ot">&lt;-</span> </span>
+<span id="cb42-2"><a href="r-tips.html#cb42-2" aria-hidden="true" tabindex="-1"></a>  fake_df <span class="sc">%&gt;%</span> </span>
+<span id="cb42-3"><a href="r-tips.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_all</span>(na_if, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb42-4"><a href="r-tips.html#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="r-tips.html#cb42-5" aria-hidden="true" tabindex="-1"></a>(converted_fake_df)</span></code></pre></div>
 <pre><code>##      x    y    z
 ## 1    1    a TRUE
 ## 2    2    b TRUE
@@ -458,158 +532,158 @@ fake_df &lt;-
 ## 6 &lt;NA&gt;    d &lt;NA&gt;</code></pre>
 <p><strong>Source:</strong> <a href="https://stackoverflow.com/questions/24172111/change-the-blank-cells-to-na" class="uri">https://stackoverflow.com/questions/24172111/change-the-blank-cells-to-na</a></p>
 </div>
-<div id="label-y-axis-in-ggplot2" class="section level2">
-<h2><span class="header-section-number">0.25</span> Label y axis in ggplot2</h2>
+<div id="label-y-axis-in-ggplot2" class="section level2" number="0.26">
+<h2><span class="header-section-number">0.26</span> Label y axis in ggplot2</h2>
 <p><strong>Q</strong>: How to label y axis with percent/dollar/comma sign?</p>
 <p><strong>A</strong>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x, y)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()
-p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>percent)
-p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar)
-p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>comma)</code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="r-tips.html#cb44-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span>
+<span id="cb44-2"><a href="r-tips.html#cb44-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent)</span>
+<span id="cb44-3"><a href="r-tips.html#cb44-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar)</span>
+<span id="cb44-4"><a href="r-tips.html#cb44-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma)</span></code></pre></div>
 </div>
-<div id="set-plot-margins-in-ggplot2" class="section level2">
-<h2><span class="header-section-number">0.26</span> Set plot margins in ggplot2</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-
-my_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">y =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)
-
-<span class="kw">ggplot</span>(my_df, <span class="kw">aes</span>(x, y)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.margin =</span> <span class="kw">unit</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="st">&quot;cm&quot;</span>)) <span class="co"># top, right, bottom and left</span></code></pre></div>
+<div id="set-plot-margins-in-ggplot2" class="section level2" number="0.27">
+<h2><span class="header-section-number">0.27</span> Set plot margins in ggplot2</h2>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="r-tips.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb45-2"><a href="r-tips.html#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="r-tips.html#cb45-3" aria-hidden="true" tabindex="-1"></a>my_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb45-4"><a href="r-tips.html#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="r-tips.html#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(my_df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb45-6"><a href="r-tips.html#cb45-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb45-7"><a href="r-tips.html#cb45-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="st">&quot;cm&quot;</span>)) <span class="co"># top, right, bottom and left</span></span></code></pre></div>
 </div>
-<div id="set-plot-margins-in-base-r" class="section level2">
-<h2><span class="header-section-number">0.27</span> Set plot margins in base R</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># sets the bottom, left, top and right margins respectively of </span>
-<span class="co"># the plot region in number of lines of text</span>
-<span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">2</span>))
-<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">xlab =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;y&quot;</span>)</code></pre></div>
+<div id="set-plot-margins-in-base-r" class="section level2" number="0.28">
+<h2><span class="header-section-number">0.28</span> Set plot margins in base R</h2>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="r-tips.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sets the bottom, left, top and right margins respectively of </span></span>
+<span id="cb46-2"><a href="r-tips.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the plot region in number of lines of text</span></span>
+<span id="cb46-3"><a href="r-tips.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">2</span>))</span>
+<span id="cb46-4"><a href="r-tips.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">xlab =</span> <span class="st">&quot;x&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 </div>
-<div id="deal-with-long-labels-in-ggplot2" class="section level2">
-<h2><span class="header-section-number">0.28</span> Deal with long labels in ggplot2</h2>
+<div id="deal-with-long-labels-in-ggplot2" class="section level2" number="0.29">
+<h2><span class="header-section-number">0.29</span> Deal with long labels in ggplot2</h2>
 <p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/41568411/how-to-maintain-size-of-ggplot-with-long-labels" class="uri">https://stackoverflow.com/questions/41568411/how-to-maintain-size-of-ggplot-with-long-labels</a></p>
 </div>
-<div id="edit-plotly-object" class="section level2">
-<h2><span class="header-section-number">0.29</span> Edit plotly object</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(plotly)
-
-df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), 
-                 <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>), 
-                 <span class="dt">group =</span> <span class="kw">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;B&#39;</span>))
-g &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">colour =</span> group)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="dv">2</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.margin =</span> <span class="kw">unit</span>(<span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="st">&quot;cm&quot;</span>))
-
-p &lt;-<span class="st"> </span><span class="kw">plotly_build</span>(g) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">config</span>(<span class="dt">displayModeBar =</span> <span class="ot">FALSE</span>)
-
-<span class="co"># to have a look at object p</span>
-<span class="co"># str(p)</span>
-
-<span class="co"># modify the text from &quot;~yintercept: 2&quot; to &quot;y-intercept = 2&quot;</span>
-p<span class="op">$</span>x<span class="op">$</span>data[[<span class="dv">3</span>]]<span class="op">$</span>text &lt;-<span class="st"> &quot;y-intercept = 2&quot;</span>
-
-p</code></pre></div>
-<div id="1fd430b7594d" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="1fd430b7594d">{"x":{"data":[{"x":[1,2],"y":[1,5],"text":["~x: 1<br />~y: 1<br />~group: A","~x: 2<br />~y: 5<br />~group: A"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","name":"A","legendgroup":"A","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,4],"y":[3,5],"text":["~x: 3<br />~y: 3<br />~group: B","~x: 4<br />~y: 5<br />~group: B"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,255,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,255,1)"}},"hoveron":"points","name":"B","legendgroup":"B","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.85,4.15],"y":[2,2],"text":"y-intercept = 2","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":34.8976377952756,"r":18.8976377952756,"b":48.851975694819,"l":43.0072268363715},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[0.85,4.15],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"x","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[0.8,5.2],"tickmode":"array","ticktext":["1","2","3","4","5"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["1","2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":"y","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.913385826771654},"annotations":[{"text":"group","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false,"displayModeBar":false},"source":"A","attrs":{"1fd41d123121":{"x":{},"y":{},"colour":{},"type":"scatter"},"1fd4768b7e44":{"yintercept":{}}},"cur_data":"1fd41d123121","visdat":{"1fd41d123121":["function (y) ","x"],"1fd4768b7e44":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null},{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script>
+<div id="edit-plotly-object" class="section level2" number="0.30">
+<h2><span class="header-section-number">0.30</span> Edit plotly object</h2>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="r-tips.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb47-2"><a href="r-tips.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb47-3"><a href="r-tips.html#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="r-tips.html#cb47-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), </span>
+<span id="cb47-5"><a href="r-tips.html#cb47-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>), </span>
+<span id="cb47-6"><a href="r-tips.html#cb47-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">group =</span> <span class="fu">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;B&#39;</span>))</span>
+<span id="cb47-7"><a href="r-tips.html#cb47-7" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> </span>
+<span id="cb47-8"><a href="r-tips.html#cb47-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data=</span>df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">colour =</span> group)) <span class="sc">+</span> </span>
+<span id="cb47-9"><a href="r-tips.html#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb47-10"><a href="r-tips.html#cb47-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb47-11"><a href="r-tips.html#cb47-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb47-12"><a href="r-tips.html#cb47-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="st">&quot;cm&quot;</span>))</span>
+<span id="cb47-13"><a href="r-tips.html#cb47-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-14"><a href="r-tips.html#cb47-14" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plotly_build</span>(g) <span class="sc">%&gt;%</span> <span class="fu">config</span>(<span class="at">displayModeBar =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb47-15"><a href="r-tips.html#cb47-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-16"><a href="r-tips.html#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="co"># to have a look at object p</span></span>
+<span id="cb47-17"><a href="r-tips.html#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="co"># str(p)</span></span>
+<span id="cb47-18"><a href="r-tips.html#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="r-tips.html#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co"># modify the text from &quot;~yintercept: 2&quot; to &quot;y-intercept = 2&quot;</span></span>
+<span id="cb47-20"><a href="r-tips.html#cb47-20" aria-hidden="true" tabindex="-1"></a>p<span class="sc">$</span>x<span class="sc">$</span>data[[<span class="dv">3</span>]]<span class="sc">$</span>text <span class="ot">&lt;-</span> <span class="st">&quot;y-intercept = 2&quot;</span></span>
+<span id="cb47-21"><a href="r-tips.html#cb47-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-22"><a href="r-tips.html#cb47-22" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<div id="htmlwidget-5f610ef7a5557457fb64" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5f610ef7a5557457fb64">{"x":{"data":[{"x":[1,2],"y":[1,5],"text":["x: 1<br />y: 1","x: 2<br />y: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","name":"A","legendgroup":"A","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,4],"y":[3,5],"text":["x: 3<br />y: 3","x: 4<br />y: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,255,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,255,1)"}},"hoveron":"points","name":"B","legendgroup":"B","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.85,4.15],"y":[2,2],"text":"y-intercept = 2","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":34.8976377952756,"r":18.8976377952756,"b":48.851975694819,"l":43.0072268363715},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.85,4.15],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"x","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.8,5.2],"tickmode":"array","ticktext":["1","2","3","4","5"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["1","2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"y","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"group","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"24a426504fd0":{"x":{},"y":{},"colour":{},"type":"scatter"},"24a43f675ad5":{"yintercept":{}}},"cur_data":"24a426504fd0","visdat":{"24a426504fd0":["function (y) ","x"],"24a43f675ad5":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="zoom-in-on-a-barchart" class="section level2">
-<h2><span class="header-section-number">0.30</span> Zoom in on a barchart</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(gridExtra)
-
-the_data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">150</span>))
-
-<span class="co"># original</span>
-p1 &lt;-
-<span class="st">  </span><span class="kw">ggplot</span>(the_data, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">weight =</span> y)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>)
-
-<span class="co"># zoomed </span>
-p2 &lt;-<span class="st"> </span>
-<span class="st">  </span>p1 <span class="op">+</span><span class="st"> </span><span class="kw">coord_cartesian</span>(<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">100</span>, <span class="dv">300</span>))
-
-<span class="co"># horizontal bars; zoomed</span>
-p3 &lt;-
-<span class="st">  </span>p1 <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>(<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">100</span>, <span class="dv">300</span>))
-
-p4 &lt;-<span class="st"> </span><span class="kw">ggplot</span>()
-
-<span class="co"># put tem together</span>
-<span class="kw">grid.arrange</span>(p1, p2, p3, p4, <span class="dt">newpage =</span> <span class="ot">TRUE</span>, 
-             <span class="dt">layout_matrix =</span> <span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dv">2</span>, <span class="dv">2</span>))</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-</div>
-<div id="gridextra-and-patchwork-packages" class="section level2">
-<h2><span class="header-section-number">0.31</span> <code>gridExtra</code> and <code>patchwork</code> packages</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(gridExtra)
-<span class="co"># library(patchwork)</span>
-
-r &lt;-<span class="st"> </span><span class="cf">function</span>() <span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>), <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>))
-
-p &lt;-<span class="st"> </span><span class="cf">function</span>() <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">r</span>(), <span class="kw">aes</span>(x, y)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()
-
-<span class="co"># (p() | p()) / p()</span>
-
-g1 &lt;-<span class="st"> </span><span class="kw">arrangeGrob</span>(<span class="dt">grobs =</span> <span class="kw">list</span>(<span class="kw">p</span>(), <span class="kw">p</span>()), <span class="dt">layout_matrix =</span> <span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))
-g2 &lt;-<span class="st"> </span><span class="kw">arrangeGrob</span>(<span class="dt">grobs =</span> <span class="kw">list</span>(<span class="kw">p</span>()), <span class="dt">nrow =</span> <span class="dv">1</span>, <span class="dt">ncol =</span> <span class="dv">1</span>)
-
-<span class="kw">grid.arrange</span>(g1, g2, <span class="dt">nrow =</span> <span class="dv">2</span>)</code></pre></div>
+<div id="zoom-in-on-a-barchart" class="section level2" number="0.31">
+<h2><span class="header-section-number">0.31</span> Zoom in on a barchart</h2>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="r-tips.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb48-2"><a href="r-tips.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb48-3"><a href="r-tips.html#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="r-tips.html#cb48-4" aria-hidden="true" tabindex="-1"></a>the_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">150</span>))</span>
+<span id="cb48-5"><a href="r-tips.html#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="r-tips.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co"># original</span></span>
+<span id="cb48-7"><a href="r-tips.html#cb48-7" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span></span>
+<span id="cb48-8"><a href="r-tips.html#cb48-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(the_data, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">weight =</span> y)) <span class="sc">+</span></span>
+<span id="cb48-9"><a href="r-tips.html#cb48-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb48-10"><a href="r-tips.html#cb48-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb48-11"><a href="r-tips.html#cb48-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-12"><a href="r-tips.html#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co"># zoomed </span></span>
+<span id="cb48-13"><a href="r-tips.html#cb48-13" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> </span>
+<span id="cb48-14"><a href="r-tips.html#cb48-14" aria-hidden="true" tabindex="-1"></a>  p1 <span class="sc">+</span> <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">300</span>))</span>
+<span id="cb48-15"><a href="r-tips.html#cb48-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-16"><a href="r-tips.html#cb48-16" aria-hidden="true" tabindex="-1"></a><span class="co"># horizontal bars; zoomed</span></span>
+<span id="cb48-17"><a href="r-tips.html#cb48-17" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span></span>
+<span id="cb48-18"><a href="r-tips.html#cb48-18" aria-hidden="true" tabindex="-1"></a>  p1 <span class="sc">+</span> <span class="fu">coord_flip</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">300</span>))</span>
+<span id="cb48-19"><a href="r-tips.html#cb48-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-20"><a href="r-tips.html#cb48-20" aria-hidden="true" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>()</span>
+<span id="cb48-21"><a href="r-tips.html#cb48-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-22"><a href="r-tips.html#cb48-22" aria-hidden="true" tabindex="-1"></a><span class="co"># put tem together</span></span>
+<span id="cb48-23"><a href="r-tips.html#cb48-23" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(p1, p2, p3, p4, <span class="at">newpage =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb48-24"><a href="r-tips.html#cb48-24" aria-hidden="true" tabindex="-1"></a>             <span class="at">layout_matrix =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+</div>
+<div id="gridextra-and-patchwork-packages" class="section level2" number="0.32">
+<h2><span class="header-section-number">0.32</span> <code>gridExtra</code> and <code>patchwork</code> packages</h2>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-tips.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb49-2"><a href="r-tips.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb49-3"><a href="r-tips.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co"># library(patchwork)</span></span>
+<span id="cb49-4"><a href="r-tips.html#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="r-tips.html#cb49-5" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="cf">function</span>() <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>))</span>
+<span id="cb49-6"><a href="r-tips.html#cb49-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-7"><a href="r-tips.html#cb49-7" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="cf">function</span>() <span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">r</span>(), <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span>
+<span id="cb49-8"><a href="r-tips.html#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-9"><a href="r-tips.html#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="co"># (p() | p()) / p()</span></span>
+<span id="cb49-10"><a href="r-tips.html#cb49-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-11"><a href="r-tips.html#cb49-11" aria-hidden="true" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">arrangeGrob</span>(<span class="at">grobs =</span> <span class="fu">list</span>(<span class="fu">p</span>(), <span class="fu">p</span>()), <span class="at">layout_matrix =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb49-12"><a href="r-tips.html#cb49-12" aria-hidden="true" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">arrangeGrob</span>(<span class="at">grobs =</span> <span class="fu">list</span>(<span class="fu">p</span>()), <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">ncol =</span> <span class="dv">1</span>)</span>
+<span id="cb49-13"><a href="r-tips.html#cb49-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-14"><a href="r-tips.html#cb49-14" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <p><strong>Source:</strong></p>
 <p><a href="https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html" class="uri">https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html</a></p>
 <p><a href="https://www.r-bloggers.com/how-to-plot-with-patchwork/" class="uri">https://www.r-bloggers.com/how-to-plot-with-patchwork/</a></p>
 </div>
-<div id="use-forcatsfct_reorder" class="section level2">
-<h2><span class="header-section-number">0.32</span> Use <code>forcats::fct_reorder()</code></h2>
+<div id="use-forcatsfct_reorder" class="section level2" number="0.33">
+<h2><span class="header-section-number">0.33</span> Use <code>forcats::fct_reorder()</code></h2>
 <p>We can use <code>forcats::fct_reorder()</code> to easily order the bars.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-<span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(forcats)
-<span class="kw">library</span>(gridExtra)
-
-fake_data &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">category =</span> <span class="kw">c</span>(<span class="st">&#39;d&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;c&#39;</span>),
-             <span class="dt">prop =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.15</span>, <span class="fl">0.05</span>)) 
-p_<span class="dv">1</span> &lt;-<span class="st"> </span>
-<span class="st">  </span>fake_data <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> category, <span class="dt">weight =</span> prop)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>, <span class="dt">fill =</span> <span class="st">&#39;red&#39;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;&quot;</span>)
-
-<span class="co"># the working of fct_reorder</span>
-<span class="co"># &gt; y &lt;- fct_reorder(fake_data$category, fake_data$prop)</span>
-<span class="co"># &gt; y</span>
-<span class="co"># [1] d b a c</span>
-<span class="co"># Levels: c a b d</span>
-
-p_<span class="dv">2</span> &lt;-<span class="st"> </span>
-<span class="st">  </span>fake_data <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">fct_reorder</span>(category, prop), <span class="dt">weight =</span> prop)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>, <span class="dt">fill =</span> <span class="st">&#39;blue&#39;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;&quot;</span>)
-
-<span class="kw">grid.arrange</span>(p_<span class="dv">1</span>, p_<span class="dv">2</span>, <span class="dt">newpage =</span> <span class="ot">TRUE</span>, 
-             <span class="dt">layout_matrix =</span> <span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dv">1</span>, <span class="dv">2</span>))</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-tips.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb50-2"><a href="r-tips.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb50-3"><a href="r-tips.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb50-4"><a href="r-tips.html#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb50-5"><a href="r-tips.html#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="r-tips.html#cb50-6" aria-hidden="true" tabindex="-1"></a>fake_data <span class="ot">&lt;-</span> </span>
+<span id="cb50-7"><a href="r-tips.html#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">category =</span> <span class="fu">c</span>(<span class="st">&#39;d&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;c&#39;</span>),</span>
+<span id="cb50-8"><a href="r-tips.html#cb50-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">prop =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.15</span>, <span class="fl">0.05</span>)) </span>
+<span id="cb50-9"><a href="r-tips.html#cb50-9" aria-hidden="true" tabindex="-1"></a>p_1 <span class="ot">&lt;-</span> </span>
+<span id="cb50-10"><a href="r-tips.html#cb50-10" aria-hidden="true" tabindex="-1"></a>  fake_data <span class="sc">%&gt;%</span> </span>
+<span id="cb50-11"><a href="r-tips.html#cb50-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> category, <span class="at">weight =</span> prop)) <span class="sc">+</span></span>
+<span id="cb50-12"><a href="r-tips.html#cb50-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">&#39;red&#39;</span>) <span class="sc">+</span></span>
+<span id="cb50-13"><a href="r-tips.html#cb50-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb50-14"><a href="r-tips.html#cb50-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb50-15"><a href="r-tips.html#cb50-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-16"><a href="r-tips.html#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="co"># the working of fct_reorder</span></span>
+<span id="cb50-17"><a href="r-tips.html#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; y &lt;- fct_reorder(fake_data$category, fake_data$prop)</span></span>
+<span id="cb50-18"><a href="r-tips.html#cb50-18" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; y</span></span>
+<span id="cb50-19"><a href="r-tips.html#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] d b a c</span></span>
+<span id="cb50-20"><a href="r-tips.html#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Levels: c a b d</span></span>
+<span id="cb50-21"><a href="r-tips.html#cb50-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-22"><a href="r-tips.html#cb50-22" aria-hidden="true" tabindex="-1"></a>p_2 <span class="ot">&lt;-</span> </span>
+<span id="cb50-23"><a href="r-tips.html#cb50-23" aria-hidden="true" tabindex="-1"></a>  fake_data <span class="sc">%&gt;%</span> </span>
+<span id="cb50-24"><a href="r-tips.html#cb50-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(category, prop), <span class="at">weight =</span> prop)) <span class="sc">+</span></span>
+<span id="cb50-25"><a href="r-tips.html#cb50-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">&#39;blue&#39;</span>) <span class="sc">+</span></span>
+<span id="cb50-26"><a href="r-tips.html#cb50-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb50-27"><a href="r-tips.html#cb50-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb50-28"><a href="r-tips.html#cb50-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-29"><a href="r-tips.html#cb50-29" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(p_1, p_2, <span class="at">newpage =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb50-30"><a href="r-tips.html#cb50-30" aria-hidden="true" tabindex="-1"></a>             <span class="at">layout_matrix =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 </div>
-<div id="use-rowmeans-under-mutate" class="section level2">
-<h2><span class="header-section-number">0.33</span> Use rowMeans under mutate</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fk_data &lt;-
-<span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">ID =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, 
-             <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,
-             <span class="dt">y =</span> <span class="dv">2</span><span class="op">:</span><span class="dv">6</span>,
-             <span class="dt">z =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)
-new_data &lt;-
-<span class="st">  </span>fk_data <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">the_mean =</span> <span class="kw">rowMeans</span>(.[, <span class="dv">2</span><span class="op">:</span><span class="dv">4</span>]))
-new_data</code></pre></div>
+<div id="use-rowmeans-under-mutate" class="section level2" number="0.34">
+<h2><span class="header-section-number">0.34</span> Use rowMeans under mutate</h2>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-tips.html#cb51-1" aria-hidden="true" tabindex="-1"></a>fk_data <span class="ot">&lt;-</span></span>
+<span id="cb51-2"><a href="r-tips.html#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, </span>
+<span id="cb51-3"><a href="r-tips.html#cb51-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb51-4"><a href="r-tips.html#cb51-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
+<span id="cb51-5"><a href="r-tips.html#cb51-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">z =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span>
+<span id="cb51-6"><a href="r-tips.html#cb51-6" aria-hidden="true" tabindex="-1"></a>new_data <span class="ot">&lt;-</span></span>
+<span id="cb51-7"><a href="r-tips.html#cb51-7" aria-hidden="true" tabindex="-1"></a>  fk_data <span class="sc">%&gt;%</span></span>
+<span id="cb51-8"><a href="r-tips.html#cb51-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">the_mean =</span> <span class="fu">rowMeans</span>(.[, <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]))</span>
+<span id="cb51-9"><a href="r-tips.html#cb51-9" aria-hidden="true" tabindex="-1"></a>new_data</span></code></pre></div>
 <pre><code>##   ID x y z the_mean
 ## 1  1 1 2 3        2
 ## 2  2 2 3 4        3
@@ -618,29 +692,29 @@ new_data</code></pre></div>
 ## 5  5 5 6 7        6</code></pre>
 <p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/33401788/dplyr-using-mutate-like-rowmeans" class="uri">https://stackoverflow.com/questions/33401788/dplyr-using-mutate-like-rowmeans</a></p>
 </div>
-<div id="list-loaded-packages" class="section level2">
-<h2><span class="header-section-number">0.34</span> List loaded packages</h2>
+<div id="list-loaded-packages" class="section level2" number="0.35">
+<h2><span class="header-section-number">0.35</span> List loaded packages</h2>
 <p><strong>Q</strong>: How to list the packages currently loaded into R’s work space?</p>
 <p><strong>A</strong>: <code>(.packages())</code></p>
 <p><strong>Source</strong>: <a href="http://theobligatescientist.blogspot.com/2010/09/r-tip-listing-loaded-packages.html" class="uri">http://theobligatescientist.blogspot.com/2010/09/r-tip-listing-loaded-packages.html</a></p>
 </div>
-<div id="function-names-in-a-loaded-package" class="section level2">
-<h2><span class="header-section-number">0.35</span> Function names in a loaded package</h2>
+<div id="function-names-in-a-loaded-package" class="section level2" number="0.36">
+<h2><span class="header-section-number">0.36</span> Function names in a loaded package</h2>
 <p><strong>Q</strong>: How to find function names in a loaded package?</p>
 <p><strong>A</strong>: Firstly load the package using <code>library()</code>, and then use <code>lsf.str(package:package_name)</code>. For example</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyr)
-<span class="kw">lsf.str</span>(<span class="st">&quot;package:tidyr&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="r-tips.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb53-2"><a href="r-tips.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lsf.str</span>(<span class="st">&quot;package:tidyr&quot;</span>)</span></code></pre></div>
 <p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/30392542/is-there-a-command-in-r-to-view-all-the-functions-present-in-a-package" class="uri">https://stackoverflow.com/questions/30392542/is-there-a-command-in-r-to-view-all-the-functions-present-in-a-package</a></p>
 </div>
-<div id="vectorize-a-matrix" class="section level2">
-<h2><span class="header-section-number">0.36</span> Vectorize a matrix</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">5</span>)
-<span class="co"># vectorize it by columns</span>
-<span class="kw">c</span>(x) 
-<span class="co"># or</span>
-<span class="kw">as.vector</span>(x)
-<span class="co"># vectorize it by rows </span>
-<span class="kw">c</span>(<span class="kw">t</span>(x))</code></pre></div>
+<div id="vectorize-a-matrix" class="section level2" number="0.37">
+<h2><span class="header-section-number">0.37</span> Vectorize a matrix</h2>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="r-tips.html#cb54-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">5</span>)</span>
+<span id="cb54-2"><a href="r-tips.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co"># vectorize it by columns</span></span>
+<span id="cb54-3"><a href="r-tips.html#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(x) </span>
+<span id="cb54-4"><a href="r-tips.html#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb54-5"><a href="r-tips.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="fu">as.vector</span>(x)</span>
+<span id="cb54-6"><a href="r-tips.html#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="co"># vectorize it by rows </span></span>
+<span id="cb54-7"><a href="r-tips.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">t</span>(x))</span></code></pre></div>
 <p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/4570537/vectorizing-a-matrix" class="uri">https://stackoverflow.com/questions/4570537/vectorizing-a-matrix</a></p>
 </div>
 </div>
@@ -654,12 +728,13 @@ new_data</code></pre></div>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -667,12 +742,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -683,7 +758,19 @@ gitbook.start({
 "link": null,
 "text": null
 },
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

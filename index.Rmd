@@ -139,6 +139,36 @@ identical(v, numeric(0))   # returns also FALSE
 rm(list=ls()[! ls() %in% c("a","b")])
 ```
 
+## Creating frequency table
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+df_ <- data.frame(x = sample(letters[1:5], 100, replace = TRUE),
+                  y = sample(LETTERS[1:5], 100, replace = TRUE),
+                  stringsAsFactors = FALSE)
+# method 1
+tab1 <- table(df_$x, df_$y)
+the_df_1 <- 
+  as.data.frame.matrix(tab1) %>% 
+  add_column(x = row.names(tab1), .before = 1)
+row.names(the_df_1) <- NULL
+(the_df_1)
+
+# method 2
+the_df_2 <- 
+  df_ %>% 
+  count(x, y) %>% 
+  pivot_wider(id_cols = x,
+                     names_from = y,
+                     values_from = n) %>% 
+  mutate(across(everything(), .fns = ~replace_na(.,0)))
+(the_df_2)
+
+```
+
+
+
+
 
 ## Programming with dplyr
 ```{r, eval=FALSE}
