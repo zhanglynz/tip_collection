@@ -38,3 +38,5 @@ vectorize-a-matrix
 viewing-all-defined-variables
 type-dir-and-help
 commenting-out
+a-list-of-functions
+use-match.arg

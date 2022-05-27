@@ -609,6 +609,31 @@ c(t(x))
 
 **Source**: https://stackoverflow.com/questions/4570537/vectorizing-a-matrix
 
+## A list of functions
+
+```{r, eval=FALSE}
+allocation_methods <-
+   list("proportion"    = function(x) x,
+        "square root"   = function(x) sqrt(x),
+        "cubic root"    = function(x) x^(1/3),
+        "log"           = function(x) log(x),
+        "kish"          = function(x) sqrt(x^2 + mean(x)^2))
+```
+
+## Use `match.arg`
+
+```{r, eval=FALSE}
+my_func <- function(x, y, method = c("sum", "subtract", "multipliction"))
+{method <- match.arg(method)
+ switch(method,
+        "sum" = x + y,
+        "subtract" = x - y,
+        "multipliction" = x * y)
+}
+```
+
+
+
 
 # Python tips {-}
 
