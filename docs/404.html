@@ -24,7 +24,7 @@
 <meta name="author" content="Lingyun Zhang" />
 
 
-<meta name="date" content="2022-05-28" />
+<meta name="date" content="2022-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -185,12 +185,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="0.37" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.37</b> Vectorize a matrix</a></li>
 <li class="chapter" data-level="0.38" data-path="r-tips.html"><a href="r-tips.html#a-list-of-functions"><i class="fa fa-check"></i><b>0.38</b> A list of functions</a></li>
 <li class="chapter" data-level="0.39" data-path="r-tips.html"><a href="r-tips.html#use-match.arg"><i class="fa fa-check"></i><b>0.39</b> Use <code>match.arg</code></a></li>
+<li class="chapter" data-level="0.40" data-path="r-tips.html"><a href="r-tips.html#use-function"><i class="fa fa-check"></i><b>0.40</b> Use function <code>()</code></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a>
 <ul>
-<li class="chapter" data-level="0.40" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.40</b> Viewing all defined variables</a></li>
-<li class="chapter" data-level="0.41" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.41</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
-<li class="chapter" data-level="0.42" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.42</b> Commenting out</a></li>
+<li class="chapter" data-level="0.41" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.41</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.42" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.42</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.43" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.43</b> Commenting out</a></li>
 </ul></li>
 </ul>
 
@@ -275,6 +276,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

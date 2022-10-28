@@ -24,7 +24,7 @@
 <meta name="author" content="Lingyun Zhang" />
 
 
-<meta name="date" content="2022-05-28" />
+<meta name="date" content="2022-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -185,12 +185,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="0.37" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.37</b> Vectorize a matrix</a></li>
 <li class="chapter" data-level="0.38" data-path="r-tips.html"><a href="r-tips.html#a-list-of-functions"><i class="fa fa-check"></i><b>0.38</b> A list of functions</a></li>
 <li class="chapter" data-level="0.39" data-path="r-tips.html"><a href="r-tips.html#use-match.arg"><i class="fa fa-check"></i><b>0.39</b> Use <code>match.arg</code></a></li>
+<li class="chapter" data-level="0.40" data-path="r-tips.html"><a href="r-tips.html#use-function"><i class="fa fa-check"></i><b>0.40</b> Use function <code>()</code></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a>
 <ul>
-<li class="chapter" data-level="0.40" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.40</b> Viewing all defined variables</a></li>
-<li class="chapter" data-level="0.41" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.41</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
-<li class="chapter" data-level="0.42" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.42</b> Commenting out</a></li>
+<li class="chapter" data-level="0.41" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.41</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.42" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.42</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.43" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.43</b> Commenting out</a></li>
 </ul></li>
 </ul>
 
@@ -211,29 +212,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="python-tips" class="section level1 unnumbered">
 <h1>Python tips</h1>
-<div id="viewing-all-defined-variables" class="section level2" number="0.40">
-<h2><span class="header-section-number">0.40</span> Viewing all defined variables</h2>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="python-tips.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>() <span class="co"># gives the list of in scope variables:</span></span>
-<span id="cb57-2"><a href="python-tips.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">globals</span>() <span class="co"># gives a dictionary of global variables</span></span>
-<span id="cb57-3"><a href="python-tips.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="fu">locals</span>() <span class="co"># gives a dictionary of local variables</span></span></code></pre></div>
+<div id="viewing-all-defined-variables" class="section level2" number="0.41">
+<h2><span class="header-section-number">0.41</span> Viewing all defined variables</h2>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="python-tips.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>() <span class="co"># gives the list of in scope variables:</span></span>
+<span id="cb58-2"><a href="python-tips.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">globals</span>() <span class="co"># gives a dictionary of global variables</span></span>
+<span id="cb58-3"><a href="python-tips.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="fu">locals</span>() <span class="co"># gives a dictionary of local variables</span></span></code></pre></div>
 <p><strong>Source</strong>: <a href="https://stackoverflow.com/questions/633127/viewing-all-defined-variables" class="uri">https://stackoverflow.com/questions/633127/viewing-all-defined-variables</a></p>
 </div>
-<div id="type-dir-and-help" class="section level2" number="0.41">
-<h2><span class="header-section-number">0.41</span> <code>type()</code>, <code>dir()</code>, and <code>help()</code></h2>
+<div id="type-dir-and-help" class="section level2" number="0.42">
+<h2><span class="header-section-number">0.42</span> <code>type()</code>, <code>dir()</code>, and <code>help()</code></h2>
 <p>The <code>type</code> function shows the type of an object; the <code>dir</code> function lists all the methods available for an object; <code>help</code> function gives explanation about a method.</p>
 <p><strong>Example</strong>:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="python-tips.html#cb58-1" aria-hidden="true" tabindex="-1"></a>stuff <span class="ot">=</span> <span class="st">&quot;Hello world&quot;</span></span>
-<span id="cb58-2"><a href="python-tips.html#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-3"><a href="python-tips.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span>(stuff)</span>
-<span id="cb58-4"><a href="python-tips.html#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>class <span class="st">&#39;str&#39;</span><span class="sc">&gt;</span></span>
-<span id="cb58-5"><a href="python-tips.html#cb58-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-6"><a href="python-tips.html#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>(stuff)</span>
-<span id="cb58-7"><a href="python-tips.html#cb58-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-8"><a href="python-tips.html#cb58-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-9"><a href="python-tips.html#cb58-9" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(str.capitalize)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="python-tips.html#cb59-1" aria-hidden="true" tabindex="-1"></a>stuff <span class="ot">=</span> <span class="st">&quot;Hello world&quot;</span></span>
+<span id="cb59-2"><a href="python-tips.html#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="python-tips.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span>(stuff)</span>
+<span id="cb59-4"><a href="python-tips.html#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>class <span class="st">&#39;str&#39;</span><span class="sc">&gt;</span></span>
+<span id="cb59-5"><a href="python-tips.html#cb59-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-6"><a href="python-tips.html#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>(stuff)</span>
+<span id="cb59-7"><a href="python-tips.html#cb59-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-8"><a href="python-tips.html#cb59-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-9"><a href="python-tips.html#cb59-9" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(str.capitalize)</span></code></pre></div>
 </div>
-<div id="commenting-out" class="section level2" number="0.42">
-<h2><span class="header-section-number">0.42</span> Commenting out</h2>
+<div id="commenting-out" class="section level2" number="0.43">
+<h2><span class="header-section-number">0.43</span> Commenting out</h2>
 <ul>
 <li>Single line comment: Ctrl + 1</li>
 <li>Multi-line comment: select the lines to be commented Ctrl + 4</li>
@@ -303,6 +304,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

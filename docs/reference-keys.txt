@@ -40,3 +40,5 @@ type-dir-and-help
 commenting-out
 a-list-of-functions
 use-match.arg
+use-use
+use-function

@@ -24,7 +24,7 @@
 <meta name="author" content="Lingyun Zhang" />
 
 
-<meta name="date" content="2022-05-28" />
+<meta name="date" content="2022-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -185,12 +185,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="0.37" data-path="r-tips.html"><a href="r-tips.html#vectorize-a-matrix"><i class="fa fa-check"></i><b>0.37</b> Vectorize a matrix</a></li>
 <li class="chapter" data-level="0.38" data-path="r-tips.html"><a href="r-tips.html#a-list-of-functions"><i class="fa fa-check"></i><b>0.38</b> A list of functions</a></li>
 <li class="chapter" data-level="0.39" data-path="r-tips.html"><a href="r-tips.html#use-match.arg"><i class="fa fa-check"></i><b>0.39</b> Use <code>match.arg</code></a></li>
+<li class="chapter" data-level="0.40" data-path="r-tips.html"><a href="r-tips.html#use-function"><i class="fa fa-check"></i><b>0.40</b> Use function <code>()</code></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="python-tips.html"><a href="python-tips.html"><i class="fa fa-check"></i>Python tips</a>
 <ul>
-<li class="chapter" data-level="0.40" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.40</b> Viewing all defined variables</a></li>
-<li class="chapter" data-level="0.41" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.41</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
-<li class="chapter" data-level="0.42" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.42</b> Commenting out</a></li>
+<li class="chapter" data-level="0.41" data-path="python-tips.html"><a href="python-tips.html#viewing-all-defined-variables"><i class="fa fa-check"></i><b>0.41</b> Viewing all defined variables</a></li>
+<li class="chapter" data-level="0.42" data-path="python-tips.html"><a href="python-tips.html#type-dir-and-help"><i class="fa fa-check"></i><b>0.42</b> <code>type()</code>, <code>dir()</code>, and <code>help()</code></a></li>
+<li class="chapter" data-level="0.43" data-path="python-tips.html"><a href="python-tips.html#commenting-out"><i class="fa fa-check"></i><b>0.43</b> Commenting out</a></li>
 </ul></li>
 </ul>
 
@@ -239,12 +240,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-9"><a href="r-tips.html#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_column</span>(<span class="at">x =</span> <span class="fu">row.names</span>(tab1), <span class="at">.before =</span> <span class="dv">1</span>)</span>
 <span id="cb8-10"><a href="r-tips.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(the_df_1) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb8-11"><a href="r-tips.html#cb8-11" aria-hidden="true" tabindex="-1"></a>(the_df_1)</span></code></pre></div>
-<pre><code>##   x A B C D E
-## 1 a 5 4 1 6 3
-## 2 b 3 2 6 5 5
-## 3 c 4 4 4 3 2
-## 4 d 2 4 1 3 5
-## 5 e 3 5 8 5 7</code></pre>
+<pre><code>##   x A B C  D E
+## 1 a 2 5 5  5 3
+## 2 b 3 3 2  3 3
+## 3 c 3 5 2  3 3
+## 4 d 3 2 5 10 7
+## 5 e 2 8 5  4 4</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="r-tips.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># method 2</span></span>
 <span id="cb10-2"><a href="r-tips.html#cb10-2" aria-hidden="true" tabindex="-1"></a>the_df_2 <span class="ot">&lt;-</span> </span>
 <span id="cb10-3"><a href="r-tips.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  df_ <span class="sc">%&gt;%</span> </span>
@@ -257,11 +258,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 5 x 6
 ##   x         A     B     C     D     E
 ##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1 a         5     4     1     6     3
-## 2 b         3     2     6     5     5
-## 3 c         4     4     4     3     2
-## 4 d         2     4     1     3     5
-## 5 e         3     5     8     5     7</code></pre>
+## 1 a         2     5     5     5     3
+## 2 b         3     3     2     3     3
+## 3 c         3     5     2     3     3
+## 4 d         3     2     5    10     7
+## 5 e         2     8     5     4     4</code></pre>
 </div>
 <div id="programming-with-dplyr" class="section level2" number="0.10">
 <h2><span class="header-section-number">0.10</span> Programming with dplyr</h2>
@@ -345,26 +346,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb17-12"><a href="r-tips.html#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-13"><a href="r-tips.html#cb17-13" aria-hidden="true" tabindex="-1"></a>ordered_df</span></code></pre></div>
 <pre><code>##    x           y
-## 1  A  0.69766073
-## 2  A  0.66780057
-## 3  A  0.64152059
-## 4  A -1.19303007
-## 5  F  0.11479913
-## 6  F -0.09671459
-## 7  F -0.27533665
-## 8  F -0.47927448
-## 9  F -0.64877935
-## 10 F -0.91896997
-## 11 B -1.41644494
-## 12 E -0.62021724
-## 13 C  0.98708625
-## 14 C  0.14841498
-## 15 C -1.15437700
-## 16 D -0.41207674
-## 17 D -0.52108850
-## 18 D -0.53047022
-## 19 D -0.62064412
-## 20 D -1.01435629</code></pre>
+## 1  A  0.53124225
+## 2  A  0.31279743
+## 3  A -0.01584192
+## 4  F  1.46605560
+## 5  F  0.82195027
+## 6  F  0.66001596
+## 7  F  0.58815326
+## 8  F -1.11827170
+## 9  B  0.92817921
+## 10 B -0.06895597
+## 11 E  0.65130071
+## 12 E -0.16873421
+## 13 E -0.30189204
+## 14 C  1.79135787
+## 15 C -1.79692559
+## 16 D  0.52754143
+## 17 D  0.22088399
+## 18 D -0.20761073
+## 19 D -0.23607166
+## 20 D -0.26426403</code></pre>
 <p><strong>Source:</strong> <a href="https://stackoverflow.com/questions/46129322/arranging-rows-in-custom-order-using-dplyr/46129338" class="uri">https://stackoverflow.com/questions/46129322/arranging-rows-in-custom-order-using-dplyr/46129338</a></p>
 </div>
 <div id="de-duplicate-a-dataframe" class="section level2" number="0.15">
@@ -460,10 +461,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb35-5"><a href="r-tips.html#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-6"><a href="r-tips.html#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># get the rows where x contains &#39;-&#39;</span></span>
 <span id="cb35-7"><a href="r-tips.html#cb35-7" aria-hidden="true" tabindex="-1"></a>(df_2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(df_1, <span class="fu">grepl</span>(<span class="st">&quot;-&quot;</span>, x)))</span></code></pre></div>
-<pre><code>##      x           y
-## 1 x-18 -0.07099848
-## 2 a-18 -0.73153374
-## 3 b-18  0.71953434</code></pre>
+<pre><code>##      x          y
+## 1 x-18 -0.8056183
+## 2 a-18 -1.1233759
+## 3 b-18  1.6382725</code></pre>
 </div>
 <div id="use-cut" class="section level2" number="0.19">
 <h2><span class="header-section-number">0.19</span> Use <code>cut()</code></h2>
@@ -474,8 +475,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb37-5"><a href="r-tips.html#cb37-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb37-6"><a href="r-tips.html#cb37-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">40</span>)</span>
 <span id="cb37-7"><a href="r-tips.html#cb37-7" aria-hidden="true" tabindex="-1"></a>(test_re <span class="ot">&lt;-</span> <span class="fu">code_tempreture</span>(x))</span></code></pre></div>
-<pre><code>##  [1] &quot;warm&quot;     &quot;cool&quot;     &quot;cool&quot;     &quot;warm&quot;     &quot;freezing&quot; &quot;hot&quot;     
-##  [7] &quot;hot&quot;      &quot;cool&quot;     &quot;cool&quot;     &quot;hot&quot;</code></pre>
+<pre><code>##  [1] &quot;warm&quot;     &quot;hot&quot;      &quot;warm&quot;     &quot;warm&quot;     &quot;freezing&quot; &quot;cool&quot;    
+##  [7] &quot;cool&quot;     &quot;hot&quot;      &quot;warm&quot;     &quot;warm&quot;</code></pre>
 </div>
 <div id="print-string-without-quote" class="section level2" number="0.20">
 <h2><span class="header-section-number">0.20</span> Print string without quote</h2>
@@ -589,8 +590,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-20"><a href="r-tips.html#cb47-20" aria-hidden="true" tabindex="-1"></a>p<span class="sc">$</span>x<span class="sc">$</span>data[[<span class="dv">3</span>]]<span class="sc">$</span>text <span class="ot">&lt;-</span> <span class="st">&quot;y-intercept = 2&quot;</span></span>
 <span id="cb47-21"><a href="r-tips.html#cb47-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-22"><a href="r-tips.html#cb47-22" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
-<div id="htmlwidget-d7c12beb558ab6afbeed" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d7c12beb558ab6afbeed">{"x":{"data":[{"x":[1,2],"y":[1,5],"text":["x: 1<br />y: 1","x: 2<br />y: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","name":"A","legendgroup":"A","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,4],"y":[3,5],"text":["x: 3<br />y: 3","x: 4<br />y: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,255,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,255,1)"}},"hoveron":"points","name":"B","legendgroup":"B","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.85,4.15],"y":[2,2],"text":"y-intercept = 2","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":34.8976377952756,"r":18.8976377952756,"b":48.851975694819,"l":43.0072268363715},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.85,4.15],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"x","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.8,5.2],"tickmode":"array","ticktext":["1","2","3","4","5"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["1","2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"y","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"group","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2218657ee5":{"x":{},"y":{},"colour":{},"type":"scatter"},"22185fa4565e":{"yintercept":{}}},"cur_data":"2218657ee5","visdat":{"2218657ee5":["function (y) ","x"],"22185fa4565e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-be46e208b1fbb2043601" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be46e208b1fbb2043601">{"x":{"data":[{"x":[1,2],"y":[1,5],"text":["x: 1<br />y: 1","x: 2<br />y: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","name":"A","legendgroup":"A","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,4],"y":[3,5],"text":["x: 3<br />y: 3","x: 4<br />y: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,255,1)","opacity":1,"size":15.1181102362205,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,255,1)"}},"hoveron":"points","name":"B","legendgroup":"B","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.85,4.15],"y":[2,2],"text":"y-intercept = 2","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":34.8976377952756,"r":18.8976377952756,"b":48.851975694819,"l":43.0072268363715},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.85,4.15],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"x","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.8,5.2],"tickmode":"array","ticktext":["1","2","3","4","5"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["1","2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"y","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"group","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"11409611b27":{"x":{},"y":{},"colour":{},"type":"scatter"},"114040ca1dad":{"yintercept":{}}},"cur_data":"11409611b27","visdat":{"11409611b27":["function (y) ","x"],"114040ca1dad":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="zoom-in-on-a-barchart" class="section level2" number="0.31">
 <h2><span class="header-section-number">0.31</span> Zoom in on a barchart</h2>
@@ -739,6 +740,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb56-6"><a href="r-tips.html#cb56-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;multipliction&quot;</span> <span class="ot">=</span> x <span class="sc">*</span> y)</span>
 <span id="cb56-7"><a href="r-tips.html#cb56-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
+<div id="use-function" class="section level2" number="0.40">
+<h2><span class="header-section-number">0.40</span> Use function <code>()</code></h2>
+<p>We define
+<span class="math display">\[
+f(x) =
+\left\{
+\begin{array}{ll}
+0, &amp; \hbox{if}\ x\le 0,\\
+x, &amp; \hbox{otherwise}.
+\end{array}
+\right.
+\]</span></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="r-tips.html#cb57-1" aria-hidden="true" tabindex="-1"></a>my_func <span class="ot">&lt;-</span> <span class="cf">function</span>(x)</span>
+<span id="cb57-2"><a href="r-tips.html#cb57-2" aria-hidden="true" tabindex="-1"></a>{x <span class="sc">*</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb57-3"><a href="r-tips.html#cb57-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb57-4"><a href="r-tips.html#cb57-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb57-5"><a href="r-tips.html#cb57-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">my_func</span>(x)</span>
+<span id="cb57-6"><a href="r-tips.html#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">type =</span> <span class="st">&#39;l&#39;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+</div>
 </div>
             </section>
 
@@ -800,6 +821,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
