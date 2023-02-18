@@ -42,3 +42,4 @@ a-list-of-functions
 use-match.arg
 use-use
 use-function
+use-trycatch

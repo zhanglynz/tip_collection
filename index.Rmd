@@ -160,8 +160,8 @@ the_df_2 <-
   count(x, y) %>% 
   pivot_wider(id_cols = x,
                      names_from = y,
-                     values_from = n) %>% 
-  mutate(across(everything(), .fns = ~replace_na(.,0)))
+                     values_from = n) # %>% 
+  # mutate(across(everything(), .fns = ~replace_na(.,0)))
 (the_df_2)
 
 ```
@@ -655,6 +655,27 @@ plot(x, y, type = 'l', lwd = 2)
 ```
 
 
+## Use `tryCatch()`
+
+```{r}
+my_log <- function(x)
+{if(!is.numeric(x) || x < 0) stop("x must be a positive number!")
+ log(x)  
+}
+log_a_b <- function(a, b)
+{tryCatch(
+   my_log(b) / my_log(a),
+   error = function(e) cat(e$message),
+   # error = function(e) print(e),
+   # warning = function(w) print(w)
+   warning = function(w) cat(w$message)
+)
+}
+
+(log_a_b(2, 3))
+(log_a_b(2, -4))
+(log_a_b(2, '3'))
+```
 
 
 # Python tips {-}
