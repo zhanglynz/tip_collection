@@ -677,6 +677,20 @@ log_a_b <- function(a, b)
 (log_a_b(2, '3'))
 ```
 
+## Arrange 
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+
+fake_data <- data.frame(x = letters[1:5],
+                        y = 1:5,
+                        stringsAsFactors = FALSE)
+
+arrange(fake_data, factor(x, levels = c('d', 'a', 'b', 'c', 'e')))
+```
+
+
+Source: https://www.r-bloggers.com/2022/06/arrange-the-rows-in-a-specific-sequence-in-r/
 
 # Python tips {-}
 
